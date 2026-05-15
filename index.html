@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RECIPE — Procedural Planning via Grounding in Instructional Video</title>
+
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;600;700&family=Castoro&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #0b1020;
+      --muted: rgba(11,16,32,0.72);
+      --muted2: rgba(11,16,32,0.55);
+      --line: rgba(11,16,32,0.10);
+      --panel: rgba(11,16,32,0.03);
+      --accent: #2563eb;   /* blue */
+      --accent2: #7c3aed;  /* purple */
+      --shadow: 0 10px 30px rgba(2,6,23,0.08);
+    }
+
+    html, body{
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Avoid anchor jumps hiding headings under sticky navbar */
+    section[id]{
+      scroll-margin-top: 92px;
+    }
+
+    /* -----------------------------
+       INTRO (recipe-style loader)
+    ------------------------------ */
+    #intro{
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(1200px 600px at 50% 30%, #0b1530 0%, #020617 70%);
+      display: grid;
+      place-items: center;
+      z-index: 9999;
+      animation: introFadeOut 0.9s ease forwards;
+      animation-delay: 4.4s;
+    }
+    .recipe-card{
+      width: min(560px, 88vw);
+      text-align: left;
+      padding: 26px 30px 28px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+    }
+    .recipe-head{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      opacity: 0;
+      transform: translateY(-6px);
+      animation: headIn 0.6s ease forwards;
+      animation-delay: 0.1s;
+    }
+    .recipe-badge{
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #38bdf8, #7c3aed);
+      display: grid; place-items: center;
+      box-shadow: 0 8px 22px rgba(56,189,248,0.35);
+    }
+    .recipe-badge svg{ width: 20px; height: 20px; }
+    .recipe-title{
+      font-family: "Google Sans", "Noto Sans", sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      font-size: 1.55rem;
+      color: #fff;
+    }
+    .recipe-sub{
+      color: rgba(255,255,255,0.65);
+      font-family: "Castoro", serif;
+      font-size: 0.92rem;
+      margin-top: 2px;
+    }
+    .recipe-goal{
+      color: rgba(255,255,255,0.85);
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      margin: 8px 0 16px;
+      padding: 8px 12px;
+      border-left: 3px solid #38bdf8;
+      background: rgba(56,189,248,0.08);
+      border-radius: 0 8px 8px 0;
+      opacity: 0;
+      transform: translateX(-8px);
+      animation: stepIn 0.5s ease forwards;
+      animation-delay: 0.55s;
+    }
+    .recipe-goal b{ color: #fff; font-weight: 800; letter-spacing: 0.06em; }
+
+    .step{
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 10px;
+      margin: 2px -10px;
+      border-radius: 10px;
+      color: rgba(255,255,255,0.55);
+      font-size: 1rem;
+      opacity: 0;
+      transform: translateY(6px);
+      animation: stepIn 0.45s ease forwards;
+      transition: color 0.35s ease, background 0.35s ease;
+    }
+    .step .num{
+      flex: 0 0 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.55);
+      display: grid; place-items: center;
+      font-weight: 800;
+      font-size: 0.82rem;
+      transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+    .step.active{
+      color: #fff;
+      background: rgba(56,189,248,0.10);
+    }
+    .step.active .num{
+      background: linear-gradient(135deg, #38bdf8, #7c3aed);
+      border-color: transparent;
+      color: #fff;
+      transform: scale(1.06);
+      box-shadow: 0 0 0 4px rgba(56,189,248,0.18);
+    }
+    .step.done{
+      color: rgba(255,255,255,0.92);
+      background: transparent;
+    }
+    .step.done .num{
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border-color: transparent;
+      color: #fff;
+      transform: scale(1);
+      box-shadow: none;
+    }
+    .step .text{
+      flex: 1;
+      line-height: 1.45;
+    }
+    .step .text .caret{
+      display: inline-block;
+      width: 7px; height: 1.05em;
+      background: rgba(255,255,255,0.85);
+      vertical-align: -2px;
+      margin-left: 2px;
+      opacity: 0;
+      animation: blink 1s steps(2,start) infinite;
+      animation-delay: 3.05s;
+    }
+    .step.active .text .caret{ opacity: 1; }
+
+    .step:nth-child(2){ animation-delay: 0.55s; }
+    .step:nth-child(3){ animation-delay: 0.70s; }
+    .step:nth-child(4){ animation-delay: 0.85s; }
+
+    @keyframes stepIn{ to{ opacity:1; transform:translateY(0) translateX(0);} }
+    @keyframes headIn{ to{ opacity:1; transform:translateY(0);} }
+    @keyframes blink{ 50%{ opacity:0; } }
+    @keyframes introFadeOut{ to{ opacity:0; visibility:hidden; } }
+
+    /* -----------------------------
+       NAVBAR
+    ------------------------------ */
+    .navbar.is-project{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.86);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navbar.is-project .navbar-item,
+    .navbar.is-project .navbar-link{
+      font-weight: 800;
+      color: var(--text);
+      background: transparent;
+    }
+    .navbar.is-project .navbar-item:hover,
+    .navbar.is-project .navbar-link:hover{
+      color: var(--accent);
+      background: transparent;
+    }
+
+    .navbar.is-project .navbar-burger span{
+      background: var(--text);
+    }
+
+    .brand-mark{
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 16px rgba(37,99,235,0.25);
+      display: inline-block;
+      margin-right: 10px;
+      transform: translateY(1px);
+    }
+
+    /* Active link */
+    .navbar.is-project .navbar-item.is-active-link{
+      color: var(--accent);
+      background: rgba(37,99,235,0.08);
+      border-radius: 999px;
+    }
+
+    /* Keep spacing nice on desktop */
+    .navbar-end .navbar-item{
+      margin: 6px 4px;
+      border-radius: 999px;
+    }
+
+    /* -----------------------------
+       PAGE STYLES
+    ------------------------------ */
+    .container.is-max-desktop{ max-width: 980px; }
+
+    .publication-title{
+      font-family: "Google Sans", "Noto Sans", sans-serif;
+      font-weight: 950;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-top: 18px;
+    }
+
+    .subtitle-ish{
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-top: 10px;
+    }
+
+    .author-line a{
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(37,99,235,0.25);
+    }
+    .author-line a:hover{
+      color: var(--accent);
+      border-bottom-color: rgba(37,99,235,0.6);
+    }
+
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin-top: 18px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+      text-decoration:none;
+      font-weight: 900;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+    }
+    .pill:hover{
+      transform: translateY(-1px);
+      border-color: rgba(37,99,235,0.25);
+      box-shadow: 0 10px 28px rgba(2,6,23,0.10);
+    }
+    .pill .dot{
+      width: 10px; height: 10px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+    }
+
+    .panelish{
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title{
+      font-family: "Google Sans", "Noto Sans", sans-serif;
+      font-weight: 950;
+      letter-spacing: -0.02em;
+    }
+
+    .sub-section-title{
+      font-family: "Google Sans", "Noto Sans", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content p, .content li{ color: var(--muted); }
+    .content strong{ color: var(--text); }
+
+    .mini-note{ color: var(--muted2); font-size: 0.95rem; }
+
+    .tag.is-soft{
+      background: rgba(37,99,235,0.10);
+      color: rgba(37,99,235,0.95);
+      border: 1px solid rgba(37,99,235,0.18);
+      font-weight: 900;
+    }
+
+    video, img{
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .figure-block{
+      margin-top: 1rem;
+    }
+    .figure-caption{
+      color: var(--muted2);
+      font-size: 0.92rem;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .footer{
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+
+    /* nicer spacing on mobile */
+    @media (max-width: 768px){
+      .publication-title{ font-size: 2rem !important; }
+      .panelish{ padding: 18px; }
+      section[id]{ scroll-margin-top: 110px; }
+    }
+  </style>
+
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => document.getElementById("intro")?.remove(), 5400);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Burger menu
+      const burger = document.querySelector(".navbar-burger");
+      const menu = document.querySelector("#navMenu");
+      burger?.addEventListener("click", () => {
+        burger.classList.toggle("is-active");
+        menu.classList.toggle("is-active");
+      });
+
+      // Close menu after click (mobile)
+      menu?.querySelectorAll("a.navbar-item").forEach(a => {
+        a.addEventListener("click", () => {
+          burger?.classList.remove("is-active");
+          menu?.classList.remove("is-active");
+        });
+      });
+
+      // Drive the loader: each step is "active" (highlighted), then "done".
+      // All four steps are already visible from ~1.0s thanks to CSS;
+      // here we walk a highlight through them.
+      const steps = document.querySelectorAll("#intro .step");
+      const schedule = [
+        { activeAt: 1250, doneAt: 2000 },
+        { activeAt: 2000, doneAt: 2800 },
+        { activeAt: 2800, doneAt: null }, // last step stays "active" (generating…)
+      ];
+      steps.forEach((s, i) => {
+        const t = schedule[i];
+        if (!t) return;
+        setTimeout(() => s.classList.add("active"), t.activeAt);
+        if (t.doneAt !== null){
+          setTimeout(() => {
+            s.classList.remove("active");
+            s.classList.add("done");
+          }, t.doneAt);
+        }
+      });
+
+      // Active nav (scroll-position logic; robust)
+      const navbar = document.querySelector(".navbar.is-project");
+      const navHeight = () => (navbar?.offsetHeight || 72);
+
+      const navLinks = new Map();
+      document.querySelectorAll("[data-nav]").forEach(a => {
+        navLinks.set(a.getAttribute("data-nav"), a);
+      });
+
+      const sectionIds = ["top","overview","experiments","contact","authors"];
+      const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+      function setActive(id){
+        document.querySelectorAll(".navbar-item.is-active-link")
+          .forEach(x => x.classList.remove("is-active-link"));
+        const link = navLinks.get(id);
+        if(link) link.classList.add("is-active-link");
+      }
+
+      function onScroll(){
+        const y = window.scrollY + navHeight() + 16;
+        let current = sections[0]?.id || "top";
+        for(const s of sections){
+          if (s.offsetTop <= y) current = s.id;
+          else break;
+        }
+        setActive(current);
+      }
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      onScroll();
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- Intro / Recipe-style loader -->
+  <div id="intro">
+    <div class="recipe-card">
+      <div class="recipe-head">
+        <div class="recipe-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 4h11l3 3v13H5z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M8 9h8M8 13h8M8 17h5" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="recipe-title">RECIPE</div>
+          <div class="recipe-sub">Procedural Planning via Grounding in Instructional Video</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">1</div>
+        <div class="text">Observe the partial video context</div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="text">Ground the history in the instructional corpus</div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="text">Score candidate plans with grounding-as-verification<span class="caret"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar is-project" role="navigation" aria-label="main navigation">
+    <div class="container is-max-desktop">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#top" data-nav="top">
+          <span class="brand-mark"></span>
+          RECIPE
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#overview" data-nav="overview">Overview</a>
+          <a class="navbar-item" href="#experiments" data-nav="experiments">Experiments</a>
+          <a class="navbar-item" href="#contact" data-nav="contact">Contact</a>
+          <a class="navbar-item" href="#authors" data-nav="authors">Authors</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / TOP -->
+  <section id="top" class="section" style="padding-top: 26px;">
+    <div class="container is-max-desktop">
+      <div class="has-text-centered">
+        <div class="tags is-centered">
+          <span class="tag is-soft">Preprint</span>
+          <span class="tag is-light" style="border:1px solid var(--line); font-weight:800;">Visual Planning Assistance</span>
+          <span class="tag is-light" style="border:1px solid var(--line); font-weight:800;">Grounding-as-Verification</span>
+          <span class="tag is-light" style="border:1px solid var(--line); font-weight:800;">GRPO</span>
+        </div>
+
+        <h1 class="title is-1 publication-title">
+          RECIPE: Procedural Planning via Grounding in Instructional Video
+        </h1>
+
+        <p class="subtitle-ish">
+          A reinforcement-learning framework that turns a noisy instructional-video corpus into a scalable verifier for procedural plans — without pseudo-labels and without a separately trained critic.
+        </p>
+
+        <p class="author-line" style="margin-top: 12px;">
+          <a href="https://seminaraluigi.altervista.org/" target="_blank" rel="noopener">Luigi Seminara</a><sup>1,2</sup>,
+          <a href="https://antoninofurnari.github.io/" target="_blank" rel="noopener">Antonino Furnari</a><sup>2</sup>,
+          <a href="https://www.khoury.northeastern.edu/people/lorenzo-torresani/" target="_blank" rel="noopener">Lorenzo Torresani</a><sup>1</sup>
+        </p>
+
+        <p class="mini-note" style="margin-top: 6px;">
+          <strong>(1)</strong> Northeastern University &nbsp;•&nbsp; <strong>(2)</strong> University of Catania
+        </p>
+
+        <!--
+        <div class="pill-row">
+          <a class="pill" href="#" target="_blank" rel="noopener"><span class="dot"></span>arXiv</a>
+          <a class="pill" href="#" target="_blank" rel="noopener"><span class="dot"></span>Code</a>
+          <a class="pill" href="#" target="_blank" rel="noopener"><span class="dot"></span>Issues</a>
+        </div>
+        -->
+      </div>
+
+      <!-- Teaser -->
+      <div style="margin-top: 26px;">
+        <div class="panelish">
+          <img src="./assets/teaser.svg" alt="RECIPE Overview Teaser" width="100%" style="display:block;">
+          <p class="figure-caption">
+            Overview of RECIPE. Generated plans are scored against a noisy instructional-video corpus (HowTo100M) via a two-stage text alignment, treating the corpus as a verifier rather than a label source. The reward credits the policy only for the alignment improvement the continuation adds beyond the history alone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section id="overview" class="section">
+    <div class="container is-max-desktop">
+      <div class="panelish">
+        <h2 class="title is-3 section-title has-text-centered">Overview</h2>
+        <div class="content">
+          <p>
+            Visual planning asks a model to generate the remaining steps of a procedure in natural language, given a partial video context and a goal. Progress is bottlenecked by annotation: clean labeled datasets are small and encode a single execution trajectory per example, while large-scale instructional corpora such as <strong>HowTo100M</strong> are noisy and unsuitable as a direct supervision source.
+          </p>
+          <p>
+            <strong>RECIPE</strong> (Reward from Empirical Corpus of Instructional Procedure Examples) reframes this corpus as a <em>verifier</em> rather than a label source. Verifying whether a generated plan is temporally grounded in ASR transcripts is comparatively cheap and scales to millions of videos via precomputed text embeddings. We exploit this asymmetry by using grounding quality as a reward signal for <strong>GRPO</strong>, training the planner end-to-end.
+          </p>
+          <p><strong>Key contributions:</strong></p>
+          <ul>
+            <li><strong>Grounding-as-verification.</strong> We use instructional videos as verifiers for generated plans, optimizing a history-normalized GRPO reward across text- and video-conditioned planners.</li>
+            <li><strong>Strong empirical gains.</strong> RECIPE-RL improves all scales and benchmarks, outperforms supervised and pseudo-label training, transfers to video-token planning, and strengthens search-based planning.</li>
+            <li><strong>Open-ended evaluation.</strong> We introduce a seven-dataset, six-criterion LLM-judge evaluation and will release code plus an online server for open-dictionary visual planning.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiments -->
+  <section id="experiments" class="section">
+    <div class="container is-max-desktop">
+      <div class="panelish">
+        <h2 class="title is-3 section-title has-text-centered">Experiments</h2>
+        <div class="content">
+          <p>
+            We evaluate RECIPE on seven procedural benchmarks (CrossTask, COIN, CaptainCook4D, EgoProceL for in-domain; NIV, Ego-Exo4D, EgoPER for zero-shot) using a reference-based LLM-as-judge protocol. Below we summarize the main findings.
+          </p>
+
+          <!-- Main Results -->
+          <h3 class="title is-4 sub-section-title">Main results across scales</h3>
+          <p>
+            <strong>RECIPE-RL improves over the base checkpoint at every scale (0.5B, 3B, 7B) and on every benchmark</strong>, with macro-accuracy gains of <strong>+7 to +8 points in-domain</strong> and <strong>up to +16 points zero-shot</strong>. At 7B, in-domain and zero-shot scores are within 0.5 points (46.6 vs. 46.1), indicating the gains do not come at the cost of generalization.
+          </p>
+          <div class="figure-block">
+            <img src="./assets/main_results.svg" alt="Main results: macro accuracy at 0.5B, 3B, 7B for Base vs. RECIPE-RL" width="100%" style="display:block;">
+          </div>
+
+          <!-- Supervised alternatives -->
+          <h3 class="title is-4 sub-section-title">Same corpus, two roles</h3>
+          <p>
+            Using HowTo100M as a <em>pseudo-label source</em> for supervised fine-tuning <strong>degrades</strong> the base checkpoint at every scale. Using the <em>same</em> corpus as a <em>verifier</em> for RL improves it substantially. Both RECIPE variants (RL only and SFT→RL) outperform both SFT baselines.
+          </p>
+          <div class="figure-block">
+            <img src="./assets/supervision_results.svg" alt="Comparison of SFT (annotated, HT100M) and RECIPE-RL variants" width="100%" style="display:block;">
+          </div>
+
+          <!-- Weak supervision -->
+          <h3 class="title is-4 sub-section-title">Robustness to weak supervision</h3>
+          <p>
+            We vary the fraction of weakly supervised training examples (where both history and continuation are derived from a VLM rather than from human annotations) from 0% to 100%. <strong>RECIPE-RL is flat across the supervision mix</strong>, while SFT collapses when annotations are scarce — at high weak-supervision fractions, SFT zero-shot accuracy falls below the no-fine-tuning baseline.
+          </p>
+          <div class="figure-block">
+            <img src="./assets/robustness_to_weak_supervision.svg" alt="Robustness to weak supervision: RECIPE-RL vs. SFT under varying weak-supervision fractions" width="100%" style="display:block;">
+          </div>
+
+          <!-- VidAssist -->
+          <h3 class="title is-4 sub-section-title">Plug-in to Visual Planning for Assistance</h3>
+          <p>
+            We integrate RECIPE-RL into the propose–assess–search pipeline of <strong>VidAssist</strong> as an additional proposer. The rest of the pipeline is unchanged, isolating the contribution of the proposal distribution. Pairing VidAssist with RECIPE-RL <strong>improves over every zero-shot baseline</strong> in our comparison on the accuracy metrics across all planning horizons.
+          </p>
+          <div class="figure-block">
+            <img src="./assets/VidAssist.svg" alt="Visual Planning for Assistance benchmark: VidAssist with RECIPE-RL improves accuracy at all horizons" width="100%" style="display:block;">
+          </div>
+
+          <!-- Reward ablation -->
+          <h3 class="title is-4 sub-section-title">Reward-component ablation</h3>
+          <p>
+            Removing any one of the four reward components (Stage-2 high-fidelity scoring, history baseline, relative-progress normalization, progress gate) costs <strong>4–11 macro-accuracy points</strong>. Stage-2 scoring is the most critical for zero-shot generalization; the history baseline prevents the policy from paraphrasing the history to inflate reward.
+          </p>
+          <div class="figure-block">
+            <img src="./assets/RewardAblation.svg" alt="Reward-component ablation on Qwen2.5-3B" width="100%" style="display:block;">
+          </div>
+
+          <!-- Procedural diversity -->
+          <h3 class="title is-4 sub-section-title">Procedural diversity on COIN</h3>
+          <p>
+            A reward that rewards <em>many</em> valid orderings should leave the policy free to express that variety. On the COIN test split, <strong>SFT collapses on both axes</strong> (lowest diversity and lowest accuracy), while <strong>RECIPE-RL is the only configuration in the upper-right region</strong>: it matches the base checkpoint's diversity while adding nearly 10 accuracy points.
+          </p>
+          <div class="figure-block">
+            <img src="./assets/procedural_diversity_on_COIN.svg" alt="Procedural diversity vs. Score@1 on COIN: RECIPE-RL preserves variety while improving accuracy" width="100%" style="display:block;">
+          </div>
+
+          <!-- Qualitative -->
+          <h3 class="title is-4 sub-section-title">Qualitative example</h3>
+          <div class="figure-block">
+            <img src="./assets/Qualitative_Example.svg" alt="Qualitative examples of plans generated by Base, SFT, and RECIPE-RL" width="100%" style="display:block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container is-max-desktop">
+      <div class="panelish">
+        <h2 class="title is-3 section-title has-text-centered">Contact</h2>
+        <div class="content">
+          <p>
+            For technical questions, please reach out via email.
+          </p>
+          <p>
+            Email:
+            <a href="mailto:seminara.l@northeastern.edu?subject=Inquiry about RECIPE&cc=antonino.furnari@unict.it;l.torresani@northeastern.edu">
+              seminara.l@northeastern.edu
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Authors -->
+  <section id="authors" class="section">
+    <div class="container is-max-desktop">
+      <div class="panelish">
+        <h2 class="title is-3 section-title has-text-centered">Authors</h2>
+        <div class="content">
+          <div style="margin-top: 26px;">
+            <img src="./assets/authors.svg" alt="Authors of RECIPE" width="100%" style="display:block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p class="mini-note">© <span id="year"></span> RECIPE — Procedural Planning via Grounding in Instructional Video</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
