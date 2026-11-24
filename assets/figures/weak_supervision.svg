@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1000" height="729.493" viewBox="879 477.253 250 182.373">
+<defs></defs>
+<rect x="879" y="477.253" width="250" height="182.373" fill="#ffffff"/>
+<line x1="896" y1="481.653" x2="905" y2="481.653" stroke="#999" stroke-width="1" stroke-linecap="butt" stroke-dasharray="2 1.4"/>
+<text xml:space="preserve" x="907" y="483.853" style="font-family:Arial;font-size:6.2px;fill:#1A1A1A;text-anchor:start;text-align:start">Base</text>
+<line x1="929.105" y1="481.653" x2="938.105" y2="481.653" stroke="#8FA2B1" stroke-width="1" stroke-linecap="butt"/>
+<rect x="932.205" y="480.253" width="2.8" height="2.8" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="940.105" y="483.853" style="font-family:Arial;font-size:6.2px;fill:#1A1A1A;text-anchor:start;text-align:start">SFT</text>
+<line x1="959.792" y1="481.653" x2="968.792" y2="481.653" stroke="#0068A8" stroke-width="1" stroke-linecap="butt"/>
+<circle cx="964.292" cy="481.653" r="1.6" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<text xml:space="preserve" x="970.792" y="483.853" style="font-family:Arial;font-size:6.2px;fill:#1A1A1A;text-anchor:start;text-align:start">RECIPE-RL</text>
+<text xml:space="preserve" x="884.4" y="565.44" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center" transform="rotate(-90 884.4 565.44)">Rubric score (%)</text>
+<text xml:space="preserve" x="893.8" y="643.803" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">0</text>
+<line x1="896" y1="611.152" x2="1006" y2="611.152" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="613.328" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">10</text>
+<line x1="896" y1="580.677" x2="1006" y2="580.677" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="582.853" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">20</text>
+<line x1="896" y1="550.203" x2="1006" y2="550.203" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="552.379" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">30</text>
+<line x1="896" y1="519.728" x2="1006" y2="519.728" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="521.904" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">40</text>
+<line x1="896" y1="489.253" x2="1006" y2="489.253" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="491.429" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">50</text>
+<line x1="896" y1="641.627" x2="1006" y2="641.627" stroke="#777" stroke-width="0.6" stroke-linecap="butt"/>
+<text xml:space="preserve" x="951" y="495.013" style="font-family:Arial;font-size:6.912px;fill:#333;text-anchor:middle;text-align:center;font-weight:bold">In-domain</text>
+<line x1="896" y1="545.936" x2="1006" y2="545.936" stroke="#999" stroke-width="0.8" stroke-linecap="butt" stroke-dasharray="2 1.4"/>
+<polyline points="904.8,573.059 927.9,540.146 951,534.965 974.1,545.022 997.2,568.792" fill="none" stroke="#8FA2B1" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="903.3" y="571.559" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<rect x="926.4" y="538.646" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<rect x="949.5" y="533.465" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<rect x="972.6" y="543.522" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<rect x="995.7" y="567.292" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<polyline points="904.8,522.166 927.9,531.308 951,520.337 974.1,526.432 997.2,523.994" fill="none" stroke="#0068A8" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="904.8" cy="522.166" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<circle cx="927.9" cy="531.308" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<circle cx="951" cy="520.337" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<circle cx="974.1" cy="526.432" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<circle cx="997.2" cy="523.994" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<text xml:space="preserve" x="904.8" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">0%</text>
+<text xml:space="preserve" x="927.9" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">25%</text>
+<text xml:space="preserve" x="951" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">50%</text>
+<text xml:space="preserve" x="974.1" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">75%</text>
+<text xml:space="preserve" x="997.2" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">100%</text>
+<rect x="1012" y="487.253" width="110" height="154.373" rx="0" ry="0" fill="#EEF2F7" stroke="none" stroke-width="0.5" />
+<line x1="1012" y1="611.152" x2="1122" y2="611.152" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="580.677" x2="1122" y2="580.677" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="550.203" x2="1122" y2="550.203" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="519.728" x2="1122" y2="519.728" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="489.253" x2="1122" y2="489.253" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="641.627" x2="1122" y2="641.627" stroke="#777" stroke-width="0.6" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1067" y="495.013" style="font-family:Arial;font-size:6.912px;fill:#333;text-anchor:middle;text-align:center;font-weight:bold">Zero-shot</text>
+<line x1="1012" y1="571.23" x2="1122" y2="571.23" stroke="#999" stroke-width="0.8" stroke-linecap="butt" stroke-dasharray="2 1.4"/>
+<polyline points="1020.8,595 1043.9,588.905 1067,571.23 1090.1,602.924 1113.2,599.572" fill="none" stroke="#8FA2B1" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1019.3" y="593.5" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<rect x="1042.4" y="587.405" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<rect x="1065.5" y="569.73" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<rect x="1088.6" y="601.424" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<rect x="1111.7" y="598.072" width="3" height="3" rx="0" ry="0" fill="#8FA2B1" stroke="none" stroke-width="0.5" />
+<polyline points="1020.8,521.556 1043.9,530.699 1067,536.184 1090.1,529.175 1113.2,532.223" fill="none" stroke="#0068A8" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1020.8" cy="521.556" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<circle cx="1043.9" cy="530.699" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<circle cx="1067" cy="536.184" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<circle cx="1090.1" cy="529.175" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<circle cx="1113.2" cy="532.223" r="1.7" fill="#0068A8" stroke="none" stroke-width="0.5"/>
+<text xml:space="preserve" x="1020.8" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">0%</text>
+<text xml:space="preserve" x="1043.9" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">25%</text>
+<text xml:space="preserve" x="1067" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">50%</text>
+<text xml:space="preserve" x="1090.1" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">75%</text>
+<text xml:space="preserve" x="1113.2" y="648.347" style="font-family:Arial;font-size:5.8px;fill:#1A1A1A;text-anchor:middle;text-align:center">100%</text>
+<text xml:space="preserve" x="1009" y="657.127" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center">Weak supervision (% of training examples)</text>
+</svg>

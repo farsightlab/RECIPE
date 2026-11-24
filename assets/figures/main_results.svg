@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1000" height="725.493" viewBox="879 261.88 250 181.373">
+<defs></defs>
+<rect x="879" y="261.88" width="250" height="181.373" fill="#ffffff"/>
+<rect x="896" y="264.016" width="7.75" height="4.96" rx="0.6" ry="0.6" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="905.92" y="268.48" style="font-family:Arial;font-size:6.2px;fill:#1A1A1A;text-anchor:start;text-align:start">Base</text>
+<rect x="927.465" y="264.016" width="7.75" height="4.96" rx="0.6" ry="0.6" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="937.385" y="268.48" style="font-family:Arial;font-size:6.2px;fill:#1A1A1A;text-anchor:start;text-align:start">RECIPE-RL</text>
+<text xml:space="preserve" x="884.4" y="354.067" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center" transform="rotate(-90 884.4 354.067)">Rubric score (%)</text>
+<text xml:space="preserve" x="893.8" y="436.429" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">0</text>
+<line x1="896" y1="402.179" x2="1006" y2="402.179" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="404.355" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">10</text>
+<line x1="896" y1="370.104" x2="1006" y2="370.104" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="372.28" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">20</text>
+<line x1="896" y1="338.029" x2="1006" y2="338.029" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="340.205" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">30</text>
+<line x1="896" y1="305.955" x2="1006" y2="305.955" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="308.131" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">40</text>
+<line x1="896" y1="273.88" x2="1006" y2="273.88" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="893.8" y="276.056" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">50</text>
+<line x1="896" y1="434.253" x2="1006" y2="434.253" stroke="#777" stroke-width="0.6" stroke-linecap="butt"/>
+<text xml:space="preserve" x="951" y="279.64" style="font-family:Arial;font-size:6.912px;fill:#333;text-anchor:middle;text-align:center;font-weight:bold">In-domain</text>
+<rect x="901.867" y="429.442" width="11.967" height="4.811" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="907.9" y="427.842" style="font-family:Arial;font-size:6px;fill:#555;text-anchor:middle;text-align:center;font-weight:bold">1.5</text>
+<rect x="914.333" y="405.065" width="11.967" height="29.188" rx="0" ry="0" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="920.367" y="403.465" style="font-family:Arial;font-size:6px;fill:#005D96;text-anchor:middle;text-align:center;font-weight:bold">9.1</text>
+<text xml:space="preserve" x="914.333" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">0.5B</text>
+<rect x="938.533" y="333.539" width="11.967" height="100.714" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="944.567" y="331.939" style="font-family:Arial;font-size:6px;fill:#555;text-anchor:middle;text-align:center;font-weight:bold">31.4</text>
+<rect x="951" y="308.521" width="11.967" height="125.733" rx="0" ry="0" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="957.033" y="306.921" style="font-family:Arial;font-size:6px;fill:#005D96;text-anchor:middle;text-align:center;font-weight:bold">39.2</text>
+<text xml:space="preserve" x="951" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">3B</text>
+<rect x="975.2" y="308.521" width="11.967" height="125.733" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="981.233" y="306.921" style="font-family:Arial;font-size:6px;fill:#555;text-anchor:middle;text-align:center;font-weight:bold">39.2</text>
+<rect x="987.667" y="284.785" width="11.967" height="149.468" rx="0" ry="0" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="993.7" y="283.185" style="font-family:Arial;font-size:6px;fill:#005D96;text-anchor:middle;text-align:center;font-weight:bold">46.6</text>
+<text xml:space="preserve" x="987.667" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">7B</text>
+<rect x="1012" y="271.88" width="110" height="162.373" rx="0" ry="0" fill="#EEF2F7" stroke="none" stroke-width="0.5" />
+<line x1="1012" y1="402.179" x2="1122" y2="402.179" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="370.104" x2="1122" y2="370.104" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="338.029" x2="1122" y2="338.029" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="305.955" x2="1122" y2="305.955" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="273.88" x2="1122" y2="273.88" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1012" y1="434.253" x2="1122" y2="434.253" stroke="#777" stroke-width="0.6" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1067" y="279.64" style="font-family:Arial;font-size:6.912px;fill:#333;text-anchor:middle;text-align:center;font-weight:bold">Zero-shot</text>
+<rect x="1017.867" y="432.008" width="11.967" height="2.245" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1023.9" y="430.408" style="font-family:Arial;font-size:6px;fill:#555;text-anchor:middle;text-align:center;font-weight:bold">0.7</text>
+<rect x="1030.333" y="410.839" width="11.967" height="23.415" rx="0" ry="0" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1036.367" y="409.239" style="font-family:Arial;font-size:6px;fill:#005D96;text-anchor:middle;text-align:center;font-weight:bold">7.3</text>
+<text xml:space="preserve" x="1030.333" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">0.5B</text>
+<rect x="1054.533" y="360.161" width="11.967" height="74.092" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1060.567" y="358.561" style="font-family:Arial;font-size:6px;fill:#555;text-anchor:middle;text-align:center;font-weight:bold">23.1</text>
+<rect x="1067" y="307.879" width="11.967" height="126.374" rx="0" ry="0" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1073.033" y="306.279" style="font-family:Arial;font-size:6px;fill:#005D96;text-anchor:middle;text-align:center;font-weight:bold">39.4</text>
+<text xml:space="preserve" x="1067" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">3B</text>
+<rect x="1091.2" y="330.011" width="11.967" height="104.243" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1097.233" y="328.411" style="font-family:Arial;font-size:6px;fill:#555;text-anchor:middle;text-align:center;font-weight:bold">32.5</text>
+<rect x="1103.667" y="286.389" width="11.967" height="147.864" rx="0" ry="0" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1109.7" y="284.789" style="font-family:Arial;font-size:6px;fill:#005D96;text-anchor:middle;text-align:center;font-weight:bold">46.1</text>
+<text xml:space="preserve" x="1103.667" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">7B</text>
+</svg>

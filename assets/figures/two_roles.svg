@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1000" height="725.493" viewBox="1137 261.88 250 181.373">
+<defs></defs>
+<rect x="1137" y="261.88" width="250" height="181.373" fill="#ffffff"/>
+<rect x="1138" y="264.232" width="7.375" height="4.72" rx="0.6" ry="0.6" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1147.44" y="268.48" style="font-family:Arial;font-size:5.9px;fill:#1A1A1A;text-anchor:start;text-align:start">Base</text>
+<rect x="1167.943" y="264.232" width="7.375" height="4.72" rx="0.6" ry="0.6" fill="#F4A3A1" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1177.383" y="268.48" style="font-family:Arial;font-size:5.9px;fill:#1A1A1A;text-anchor:start;text-align:start">SFT-Ann.</text>
+<rect x="1209.68" y="264.232" width="7.375" height="4.72" rx="0.6" ry="0.6" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1219.12" y="268.48" style="font-family:Arial;font-size:5.9px;fill:#1A1A1A;text-anchor:start;text-align:start">SFT-HT100M</text>
+<rect x="1261.89" y="264.232" width="7.375" height="4.72" rx="0.6" ry="0.6" fill="#8FBCEB" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1271.33" y="268.48" style="font-family:Arial;font-size:5.9px;fill:#1A1A1A;text-anchor:start;text-align:start">SFT→RL</text>
+<rect x="1302.954" y="264.232" width="7.375" height="4.72" rx="0.6" ry="0.6" fill="#2852E2" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1312.394" y="268.48" style="font-family:Arial;font-size:5.9px;fill:#1A1A1A;text-anchor:start;text-align:start">RL only</text>
+<text xml:space="preserve" x="1142.4" y="354.067" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center" transform="rotate(-90 1142.4 354.067)">Rubric score (%)</text>
+<text xml:space="preserve" x="1151.8" y="436.429" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">0</text>
+<line x1="1154" y1="402.179" x2="1264" y2="402.179" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="404.355" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">10</text>
+<line x1="1154" y1="370.104" x2="1264" y2="370.104" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="372.28" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">20</text>
+<line x1="1154" y1="338.029" x2="1264" y2="338.029" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="340.205" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">30</text>
+<line x1="1154" y1="305.955" x2="1264" y2="305.955" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="308.131" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">40</text>
+<line x1="1154" y1="273.88" x2="1264" y2="273.88" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="276.056" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">50</text>
+<line x1="1154" y1="434.253" x2="1264" y2="434.253" stroke="#777" stroke-width="0.6" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1209" y="279.64" style="font-family:Arial;font-size:6.912px;fill:#333;text-anchor:middle;text-align:center;font-weight:bold">In-domain</text>
+<rect x="1157.3" y="429.442" width="5.763" height="4.811" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<rect x="1163.313" y="400.575" width="5.763" height="33.678" rx="0" ry="0" fill="#F4A3A1" stroke="none" stroke-width="0.5" />
+<rect x="1169.327" y="411.801" width="5.763" height="22.452" rx="0" ry="0" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<rect x="1175.34" y="401.537" width="5.763" height="32.716" rx="0" ry="0" fill="#8FBCEB" stroke="none" stroke-width="0.5" />
+<rect x="1181.353" y="405.065" width="5.763" height="29.188" rx="0" ry="0" fill="#2852E2" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1184.16" y="399.937" style="font-family:Arial;font-size:6px;fill:#2852E2;text-anchor:middle;text-align:center;font-weight:bold">9.1</text>
+<line x1="1157.3" y1="429.442" x2="1187.367" y2="429.442" stroke="#666" stroke-width="0.5" stroke-linecap="butt" stroke-dasharray="1.6 1.2"/>
+<text xml:space="preserve" x="1172.333" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">0.5B</text>
+<rect x="1193.967" y="333.539" width="5.763" height="100.714" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<rect x="1199.98" y="362.085" width="5.763" height="72.168" rx="0" ry="0" fill="#F4A3A1" stroke="none" stroke-width="0.5" />
+<rect x="1205.993" y="395.443" width="5.763" height="38.81" rx="0" ry="0" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<rect x="1212.007" y="313.653" width="5.763" height="120.601" rx="0" ry="0" fill="#8FBCEB" stroke="none" stroke-width="0.5" />
+<rect x="1218.02" y="308.521" width="5.763" height="125.733" rx="0" ry="0" fill="#2852E2" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1220.827" y="306.921" style="font-family:Arial;font-size:6px;fill:#2852E2;text-anchor:middle;text-align:center;font-weight:bold">39.2</text>
+<line x1="1193.967" y1="333.539" x2="1224.033" y2="333.539" stroke="#666" stroke-width="0.5" stroke-linecap="butt" stroke-dasharray="1.6 1.2"/>
+<text xml:space="preserve" x="1209" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">3B</text>
+<rect x="1230.633" y="308.521" width="5.763" height="125.733" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<rect x="1236.647" y="341.237" width="5.763" height="93.017" rx="0" ry="0" fill="#F4A3A1" stroke="none" stroke-width="0.5" />
+<rect x="1242.66" y="388.387" width="5.763" height="45.867" rx="0" ry="0" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<rect x="1248.673" y="298.577" width="5.763" height="135.676" rx="0" ry="0" fill="#8FBCEB" stroke="none" stroke-width="0.5" />
+<rect x="1254.687" y="284.785" width="5.763" height="149.468" rx="0" ry="0" fill="#2852E2" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1257.493" y="283.185" style="font-family:Arial;font-size:6px;fill:#2852E2;text-anchor:middle;text-align:center;font-weight:bold">46.6</text>
+<line x1="1230.633" y1="308.521" x2="1260.7" y2="308.521" stroke="#666" stroke-width="0.5" stroke-linecap="butt" stroke-dasharray="1.6 1.2"/>
+<text xml:space="preserve" x="1245.667" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">7B</text>
+<rect x="1270" y="271.88" width="110" height="162.373" rx="0" ry="0" fill="#EEF2F7" stroke="none" stroke-width="0.5" />
+<line x1="1270" y1="402.179" x2="1380" y2="402.179" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1270" y1="370.104" x2="1380" y2="370.104" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1270" y1="338.029" x2="1380" y2="338.029" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1270" y1="305.955" x2="1380" y2="305.955" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1270" y1="273.88" x2="1380" y2="273.88" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<line x1="1270" y1="434.253" x2="1380" y2="434.253" stroke="#777" stroke-width="0.6" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1325" y="279.64" style="font-family:Arial;font-size:6.912px;fill:#333;text-anchor:middle;text-align:center;font-weight:bold">Zero-shot</text>
+<rect x="1273.3" y="432.008" width="5.763" height="2.245" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<rect x="1279.313" y="420.461" width="5.763" height="13.792" rx="0" ry="0" fill="#F4A3A1" stroke="none" stroke-width="0.5" />
+<rect x="1285.327" y="421.423" width="5.763" height="12.83" rx="0" ry="0" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<rect x="1291.34" y="420.14" width="5.763" height="14.113" rx="0" ry="0" fill="#8FBCEB" stroke="none" stroke-width="0.5" />
+<rect x="1297.353" y="410.839" width="5.763" height="23.415" rx="0" ry="0" fill="#2852E2" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1300.16" y="409.239" style="font-family:Arial;font-size:6px;fill:#2852E2;text-anchor:middle;text-align:center;font-weight:bold">7.3</text>
+<line x1="1273.3" y1="432.008" x2="1303.367" y2="432.008" stroke="#666" stroke-width="0.5" stroke-linecap="butt" stroke-dasharray="1.6 1.2"/>
+<text xml:space="preserve" x="1288.333" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">0.5B</text>
+<rect x="1309.967" y="360.161" width="5.763" height="74.092" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<rect x="1315.98" y="386.462" width="5.763" height="47.791" rx="0" ry="0" fill="#F4A3A1" stroke="none" stroke-width="0.5" />
+<rect x="1321.993" y="407.952" width="5.763" height="26.301" rx="0" ry="0" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<rect x="1328.007" y="330.011" width="5.763" height="104.243" rx="0" ry="0" fill="#8FBCEB" stroke="none" stroke-width="0.5" />
+<rect x="1334.02" y="307.879" width="5.763" height="126.374" rx="0" ry="0" fill="#2852E2" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1336.827" y="306.279" style="font-family:Arial;font-size:6px;fill:#2852E2;text-anchor:middle;text-align:center;font-weight:bold">39.4</text>
+<line x1="1309.967" y1="360.161" x2="1340.033" y2="360.161" stroke="#666" stroke-width="0.5" stroke-linecap="butt" stroke-dasharray="1.6 1.2"/>
+<text xml:space="preserve" x="1325" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">3B</text>
+<rect x="1346.633" y="330.011" width="5.763" height="104.243" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<rect x="1352.647" y="358.878" width="5.763" height="75.375" rx="0" ry="0" fill="#F4A3A1" stroke="none" stroke-width="0.5" />
+<rect x="1358.66" y="399.933" width="5.763" height="34.32" rx="0" ry="0" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<rect x="1364.673" y="301.143" width="5.763" height="133.11" rx="0" ry="0" fill="#8FBCEB" stroke="none" stroke-width="0.5" />
+<rect x="1370.687" y="286.389" width="5.763" height="147.864" rx="0" ry="0" fill="#2852E2" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1373.493" y="284.789" style="font-family:Arial;font-size:6px;fill:#2852E2;text-anchor:middle;text-align:center;font-weight:bold">46.1</text>
+<line x1="1346.633" y1="330.011" x2="1376.7" y2="330.011" stroke="#666" stroke-width="0.5" stroke-linecap="butt" stroke-dasharray="1.6 1.2"/>
+<text xml:space="preserve" x="1361.667" y="440.973" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">7B</text>
+</svg>

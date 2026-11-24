@@ -3,7 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RECIPE — Procedural Planning via Grounding in Instructional Video</title>
+  <title>RECIPE — Procedural Planning via Grounding in Instructional Video (NeurIPS 2026)</title>
+  <meta name="description" content="RECIPE turns a noisy instructional-video corpus into a verifier for generated procedural plans: grounding quality is the reward for GRPO, with no pseudo-labels and no learned critic. NeurIPS 2026." />
+  <meta name="author" content="Luigi Seminara, Antonino Furnari, Lorenzo Torresani" />
+  <link rel="canonical" href="https://farsightlab.github.io/RECIPE/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="./assets/favicon-180.png" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Social cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RECIPE: Procedural Planning via Grounding in Instructional Video" />
+  <meta property="og:description" content="A noisy instructional-video corpus as a verifier for procedural plans. NeurIPS 2026." />
+  <meta property="og:url" content="https://farsightlab.github.io/RECIPE/" />
+  <meta property="og:image" content="https://farsightlab.github.io/RECIPE/assets/video_poster.jpg" />
+  <meta property="og:video" content="https://farsightlab.github.io/RECIPE/assets/RECIPE_how_it_works.mp4" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Scholar metadata -->
+  <meta name="citation_title" content="RECIPE: Procedural Planning via Grounding in Instructional Video" />
+  <meta name="citation_author" content="Seminara, Luigi" />
+  <meta name="citation_author" content="Furnari, Antonino" />
+  <meta name="citation_author" content="Torresani, Lorenzo" />
+  <meta name="citation_publication_date" content="2026" />
+  <meta name="citation_conference_title" content="The Fortieth Annual Conference on Neural Information Processing Systems" />
+  <meta name="citation_pdf_url" content="https://openreview.net/pdf?id=lpkQB5Oy5S" />
 
   <!-- Bulma -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -347,11 +374,253 @@
       background: #fff;
     }
 
+    /* -----------------------------
+       ADDITIONS: news, stats, tables, bibtex, authors
+    ------------------------------ */
+    .tag.is-venue{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      font-weight: 900;
+      border: none;
+    }
+    .pill.is-primary-pill{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      border-color: transparent;
+    }
+    .pill.is-primary-pill .dot{ background: #fff; }
+    .pill.is-primary-pill:hover{ color: #fff; }
+
+    .news-list{ list-style: none; margin: 0; padding: 0; }
+    .news-item{
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 14px 4px;
+      border-top: 1px solid var(--line);
+    }
+    .news-item:first-child{ border-top: none; }
+    .news-date{
+      flex: 0 0 122px;
+      font-weight: 900;
+      font-size: 0.88rem;
+      color: var(--accent);
+      background: rgba(37,99,235,0.08);
+      border: 1px solid rgba(37,99,235,0.16);
+      border-radius: 999px;
+      padding: 5px 10px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .news-body{ color: var(--muted); line-height: 1.5; }
+    .news-body strong{ color: var(--text); }
+    .news-body a{ font-weight: 700; }
+    .news-when{
+      display: inline-block;
+      margin-top: 4px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .stat-row{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 1.1rem 0 0.4rem;
+    }
+    .stat{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 12px;
+      text-align: center;
+      background: var(--panel);
+    }
+    .stat .big{
+      font-family: "Google Sans", "Noto Sans", sans-serif;
+      font-weight: 900;
+      font-size: 1.55rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.2;
+    }
+    .stat .lbl{ color: var(--muted); font-size: 0.9rem; margin-top: 4px; line-height: 1.35; }
+
+    .steps3{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 1rem 0 0.4rem;
+    }
+    .step-card{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: var(--panel);
+    }
+    .step-card .n{
+      display: inline-grid;
+      place-items: center;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.85rem;
+      margin-right: 8px;
+    }
+    .step-card h4{
+      font-family: "Google Sans", "Noto Sans", sans-serif;
+      font-weight: 800;
+      font-size: 1.02rem;
+      margin: 0 0 6px !important;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+    }
+    .step-card p{ font-size: 0.93rem; margin: 0 !important; line-height: 1.5; }
+
+    .fig-narrow{ max-width: 700px; margin-left: auto; margin-right: auto; }
+    .fig-mid{ max-width: 820px; margin-left: auto; margin-right: auto; }
+    .figure-block img{ padding: 10px; }
+
+    .table-wrap{ overflow-x: auto; margin-top: 0.9rem; }
+    table.rtable{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+      border-top: 2px solid var(--text);
+      border-bottom: 2px solid var(--text);
+      background: #fff;
+    }
+    .content table.rtable thead th,
+    .content table.rtable tbody td{
+      padding: 7px 10px;
+      text-align: center;
+      vertical-align: middle;
+      border: none;
+      border-bottom: 1px solid var(--line);
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .content table.rtable thead th{
+      border-bottom: 1px solid var(--text);
+      font-weight: 800;
+      vertical-align: bottom;
+    }
+    /* group headers (colspan) get a short rule under them, like booktabs \cmidrule */
+    .content table.rtable thead th[colspan]{
+      border-bottom: none;
+      padding-bottom: 3px;
+      background-image: linear-gradient(var(--text), var(--text));
+      background-size: calc(100% - 14px) 1px;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+    }
+    .content table.rtable thead th.l,
+    .content table.rtable tbody td.l{ text-align: left; }
+    .content table.rtable tbody td.wrap{ white-space: normal; }
+    .content table.rtable tr.ours td{ background: rgba(37,99,235,0.07); font-weight: 800; }
+    .content table.rtable tr.grp td{
+      text-align: left;
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      background: var(--panel);
+    }
+    .content table.rtable tbody td.bad{ color: #c8413b; }
+    .content table.rtable tbody td.ok{ color: #15803d; font-weight: 900; }
+    .content table.rtable tbody td.no{ color: #c8413b; font-weight: 900; }
+    .table-caption{ color: var(--muted2); font-size: 0.92rem; margin-top: 8px; text-align: center; }
+
+    .takeaway{
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-left: 3px solid var(--accent);
+      background: rgba(37,99,235,0.06);
+      border-radius: 0 10px 10px 0;
+      color: var(--text) !important;
+      font-weight: 700;
+    }
+
+    .bibtex-wrap{ position: relative; margin-top: 14px; }
+    .bibtex-wrap pre{
+      background: #0b1020;
+      color: #e5e7eb;
+      border-radius: 14px;
+      padding: 20px 22px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      overflow-x: auto;
+      white-space: pre;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .copy-btn{
+      position: absolute;
+      top: 10px; right: 10px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.10);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.82rem;
+      border-radius: 999px;
+      padding: 6px 14px;
+      cursor: pointer;
+      transition: background .15s ease, border-color .15s ease;
+    }
+    .copy-btn:hover{ background: rgba(255,255,255,0.20); }
+    .copy-btn.copied{ background: #16a34a; border-color: #16a34a; }
+
+    .author-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .author-card{
+      text-align: center;
+      padding: 22px 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      text-decoration: none;
+      display: block;
+    }
+    .author-card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(37,99,235,0.25);
+      box-shadow: 0 10px 28px rgba(2,6,23,0.10);
+    }
+    .author-card img{
+      width: 148px; height: 148px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px rgba(37,99,235,0.35), 0 10px 24px rgba(2,6,23,0.12);
+      display: block;
+      margin: 0 auto 14px;
+    }
+    .author-card .name{
+      font-family: "Google Sans", "Noto Sans", sans-serif;
+      font-weight: 800;
+      font-size: 1.12rem;
+      color: var(--text);
+    }
+    .author-card .aff{ color: var(--muted); font-size: 0.9rem; margin-top: 4px; line-height: 1.4; }
+
     /* nicer spacing on mobile */
     @media (max-width: 768px){
       .publication-title{ font-size: 2rem !important; }
       .panelish{ padding: 18px; }
       section[id]{ scroll-margin-top: 110px; }
+      .stat-row, .steps3, .author-grid{ grid-template-columns: 1fr; }
+      .news-item{ flex-direction: column; gap: 8px; }
+      .news-date{ flex: 0 0 auto; }
     }
   </style>
 
@@ -407,7 +676,7 @@
         navLinks.set(a.getAttribute("data-nav"), a);
       });
 
-      const sectionIds = ["top","overview","experiments","contact","authors"];
+      const sectionIds = ["top","news","overview","method","experiments","bibtex","authors"];
       const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
       function setActive(id){
@@ -426,6 +695,27 @@
         }
         setActive(current);
       }
+
+      // Copy BibTeX
+      const copyBtn = document.getElementById("copyBib");
+      copyBtn?.addEventListener("click", async () => {
+        const txt = document.getElementById("bibtexCode").textContent.trim() + "\n";
+        try{
+          await navigator.clipboard.writeText(txt);
+        }catch(e){
+          const ta = document.createElement("textarea");
+          ta.value = txt;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          ta.remove();
+        }
+        copyBtn.textContent = "Copied!";
+        copyBtn.classList.add("copied");
+        setTimeout(() => { copyBtn.textContent = "Copy"; copyBtn.classList.remove("copied"); }, 1800);
+      });
 
       window.addEventListener("scroll", onScroll, { passive: true });
       window.addEventListener("resize", onScroll);
@@ -485,9 +775,11 @@
 
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
+          <a class="navbar-item" href="#news" data-nav="news">News</a>
           <a class="navbar-item" href="#overview" data-nav="overview">Overview</a>
+          <a class="navbar-item" href="#method" data-nav="method">Method</a>
           <a class="navbar-item" href="#experiments" data-nav="experiments">Experiments</a>
-          <a class="navbar-item" href="#contact" data-nav="contact">Contact</a>
+          <a class="navbar-item" href="#bibtex" data-nav="bibtex">BibTeX</a>
           <a class="navbar-item" href="#authors" data-nav="authors">Authors</a>
         </div>
       </div>
@@ -499,8 +791,8 @@
     <div class="container is-max-desktop">
       <div class="has-text-centered">
         <div class="tags is-centered">
-          <span class="tag is-soft">Preprint</span>
-          <span class="tag is-light" style="border:1px solid var(--line); font-weight:800;">Visual Planning Assistance</span>
+          <span class="tag is-venue">NeurIPS 2026</span>
+          <span class="tag is-light" style="border:1px solid var(--line); font-weight:800;">Open-Vocabulary Visual Planning</span>
           <span class="tag is-light" style="border:1px solid var(--line); font-weight:800;">Grounding-as-Verification</span>
           <span class="tag is-light" style="border:1px solid var(--line); font-weight:800;">GRPO</span>
         </div>
@@ -510,7 +802,7 @@
         </h1>
 
         <p class="subtitle-ish">
-          A reinforcement-learning framework that turns a noisy instructional-video corpus into a scalable verifier for procedural plans — without pseudo-labels and without a separately trained critic.
+          Extracting clean step labels from noisy video is hard; verifying that a generated plan is grounded in the same video is cheap. RECIPE turns a noisy instructional-video corpus into a scalable verifier for procedural plans, with no pseudo-labels and no separately trained critic.
         </p>
 
         <p class="author-line" style="margin-top: 12px;">
@@ -520,24 +812,74 @@
         </p>
 
         <p class="mini-note" style="margin-top: 6px;">
-          <strong>(1)</strong> Northeastern University &nbsp;•&nbsp; <strong>(2)</strong> University of Catania
+          <strong>(1)</strong> Khoury College of Computer Sciences, Northeastern University &nbsp;•&nbsp; <strong>(2)</strong> University of Catania
+        </p>
+
+        <p class="mini-note" style="margin-top: 4px;">
+          40th Conference on Neural Information Processing Systems (<strong>NeurIPS 2026</strong>)
         </p>
 
         <div class="pill-row">
+          <a class="pill is-primary-pill" href="https://openreview.net/pdf?id=lpkQB5Oy5S" target="_blank" rel="noopener"><span class="dot"></span>Paper</a>
+          <a class="pill" href="https://openreview.net/forum?id=lpkQB5Oy5S" target="_blank" rel="noopener"><span class="dot"></span>OpenReview</a>
           <a class="pill" href="https://arxiv.org/abs/2605.19976" target="_blank" rel="noopener"><span class="dot"></span>arXiv</a>
-          <!--<a class="pill" href="#" target="_blank" rel="noopener"><span class="dot"></span>Code</a>
-          <a class="pill" href="#" target="_blank" rel="noopener"><span class="dot"></span>Issues</a>-->
+          <a class="pill" href="#video"><span class="dot"></span>Video</a>
+          <a class="pill" href="#bibtex"><span class="dot"></span>BibTeX</a>
+          <a class="pill" href="https://neurips.cc/virtual/2026/loc/atlanta/poster/149970" target="_blank" rel="noopener"><span class="dot"></span>NeurIPS page</a>
+          <!--<a class="pill" href="#" target="_blank" rel="noopener"><span class="dot"></span>Code</a>-->
+        </div>
+      </div>
+
+      <!-- Video -->
+      <div id="video" style="margin-top: 26px;">
+        <div class="panelish">
+          <video controls playsinline preload="metadata" poster="./assets/video_poster.jpg" width="100%" style="display:block; aspect-ratio:16/9; background:#020617;">
+            <source src="./assets/RECIPE_how_it_works.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            <a href="./assets/RECIPE_how_it_works.mp4">Download the video</a>.
+          </video>
+          <p class="figure-caption">
+            RECIPE in under two minutes: the task, how the grounding reward trains the planner, and a qualitative example. The training walkthrough uses an illustrative example.
+          </p>
         </div>
       </div>
 
       <!-- Teaser -->
       <div style="margin-top: 26px;">
         <div class="panelish">
-          <img src="./assets/teaser.svg" alt="RECIPE Overview Teaser" width="100%" style="display:block;">
+          <img src="./assets/figures/overview.svg" alt="Overview of RECIPE: input, Socratic and Video planners, candidate rollouts, grounding-as-verification against HowTo100M narrations, reward and GRPO update" width="100%" style="display:block; border:none;">
           <p class="figure-caption">
-            Overview of RECIPE. Generated plans are scored against a noisy instructional-video corpus (HowTo100M) via a two-stage text alignment, treating the corpus as a verifier rather than a label source. The reward credits the policy only for the alignment improvement the continuation adds beyond the history alone.
+            Overview of RECIPE. The Socratic configuration uses a frozen VLM to convert the video into a textual history, while the Video configuration consumes video tokens directly. Both generate candidate plans that are scored against noisy instructional narrations from HowTo100M; the resulting rewards train the planner with GRPO.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news" class="section">
+    <div class="container is-max-desktop">
+      <div class="panelish">
+        <h2 class="title is-3 section-title has-text-centered">News</h2>
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="news-date">Dec 10, 2026</span>
+            <div class="news-body">
+              <strong>Poster at NeurIPS 2026 in Atlanta.</strong>
+              We will present RECIPE at the
+              <a href="https://neurips.cc/virtual/2026/loc/atlanta/poster/149970" target="_blank" rel="noopener">NeurIPS 2026 poster session</a>. Come and say hi!<br>
+              <span class="news-when">Thu, Dec 10, 2026 • 4:30 PM – 7:30 PM EST</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <span class="news-date">Sep 24, 2026</span>
+            <div class="news-body">
+              <strong>RECIPE has been accepted to NeurIPS 2026.</strong>
+              The camera-ready version is available on
+              <a href="https://openreview.net/pdf?id=lpkQB5Oy5S" target="_blank" rel="noopener">OpenReview</a>.
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -548,18 +890,105 @@
       <div class="panelish">
         <h2 class="title is-3 section-title has-text-centered">Overview</h2>
         <div class="content">
+          <h3 class="title is-4 sub-section-title">Open-vocabulary visual planning</h3>
           <p>
-            Visual planning asks a model to generate the remaining steps of a procedure in natural language, given a partial video context and a goal. Progress is bottlenecked by annotation: clean labeled datasets are small and encode a single execution trajectory per example, while large-scale instructional corpora such as <strong>HowTo100M</strong> are noisy and unsuitable as a direct supervision source.
+            Given a <strong>partial video</strong> and a <strong>goal</strong>, the model must generate the remaining steps of the procedure in <strong>natural language</strong>, with no fixed action taxonomy: free-form instructions that can be tailored to the tools, ingredients, and cues visible in the video.
           </p>
-          <p>
-            <strong>RECIPE</strong> (Reward from Empirical Corpus of Instructional Procedure Examples) reframes this corpus as a <em>verifier</em> rather than a label source. Verifying whether a generated plan is temporally grounded in ASR transcripts is comparatively cheap and scales to millions of videos via precomputed text embeddings. We exploit this asymmetry by using grounding quality as a reward signal for <strong>GRPO</strong>, training the planner end-to-end.
-          </p>
-          <p><strong>Key contributions:</strong></p>
+          <div class="figure-block fig-mid">
+            <img src="./assets/figures/task.svg" alt="Problem setup: a goal and a partial video are fed to the planner, which generates the remaining steps in natural language" width="100%" style="display:block;">
+          </div>
+
+          <h3 class="title is-4 sub-section-title">The annotation bottleneck</h3>
           <ul>
-            <li><strong>Grounding-as-verification.</strong> We use instructional videos as verifiers for generated plans, optimizing a history-normalized GRPO reward across text- and video-conditioned planners.</li>
-            <li><strong>Strong empirical gains.</strong> RECIPE-RL improves all scales and benchmarks, outperforms supervised and pseudo-label training, transfers to video-token planning, and strengthens search-based planning.</li>
-            <li><strong>Open-ended evaluation.</strong> We introduce a seven-dataset, six-criterion LLM-judge evaluation and will release code plus an online server for open-dictionary visual planning.</li>
+            <li><strong>Annotated datasets</strong> such as CrossTask and COIN are small, domain-narrow, and encode <strong>one trajectory</strong> per example, although many valid orderings often exist.</li>
+            <li><strong>HowTo100M</strong> offers orders of magnitude more procedural content (1.2M videos), but its automatically transcribed narrations are <strong>noisy</strong> and lack reliable step segmentation.</li>
+            <li><strong>Supervised fine-tuning on pseudo-labels</strong> extracted from those narrations propagates segmentation and alignment errors into training, and the supervision is still single-trajectory.</li>
           </ul>
+
+          <h3 class="title is-4 sub-section-title">Key insight: verify, don't extract</h3>
+          <p>
+            <strong>RECIPE</strong> (<strong>R</strong>eward from <strong>E</strong>mpirical <strong>C</strong>orpus of <strong>I</strong>nstructional <strong>P</strong>rocedure <strong>E</strong>xamples) reframes the role of the noisy corpus. Rather than mining it for labels or distilling it into a critic model, we use the data <em>itself</em> as the verifier: the history localizes the relevant region of the corpus, and the reward measures how well the generated completion aligns with it. Because many different orderings can each score well, the policy learns from several valid plans at once instead of being pushed toward a single annotator's choice.
+          </p>
+          <div class="figure-block fig-mid">
+            <img src="./assets/figures/insight.svg" alt="Two roles for the same corpus: as a label source, errors propagate; as a verifier, noise is absorbed by a soft reward and many valid orderings are rewarded" width="100%" style="display:block;">
+          </div>
+
+          <div class="stat-row">
+            <div class="stat"><div class="big">Verifier</div><div class="lbl">A noisy video corpus scores generated plans: no pseudo-labels, no learned critic.</div></div>
+            <div class="stat"><div class="big">+7 to +8 / +16</div><div class="lbl">Rubric-score points in-domain at every scale, and up to +16 zero-shot.</div></div>
+            <div class="stat"><div class="big">Variety</div><div class="lbl">Preserves the procedural diversity that supervised fine-tuning collapses.</div></div>
+          </div>
+
+          <p style="margin-top: 1.2rem;"><strong>Contributions</strong></p>
+          <ul>
+            <li><strong>Grounding-as-verification for procedural planning.</strong> We turn a noisy, large-scale instructional video corpus into a verifier for generated plans rather than a source of labels. A history baseline credits the policy only for what the continuation adds beyond the partial plan. The reward is optimized with GRPO and applies uniformly whether the planner reads textual histories (Socratic) or raw video tokens (Video).</li>
+            <li><strong>Empirical study.</strong> RECIPE-RL improves over the base checkpoint at every scale (0.5B, 3B, 7B) and on all seven in-domain and zero-shot benchmarks. It outperforms supervised fine-tuning on both annotated continuations and HowTo100M pseudo-labels, transfers to a Video planner, and still improves when trained fully unsupervised, without curated procedural datasets.</li>
+            <li><strong>An open-ended evaluation protocol.</strong> We aggregate seven procedural-video datasets and score generated plans with a six-criterion LLM-as-judge rubric, validated against human preferences. We will host an online evaluation server alongside the released code.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method -->
+  <section id="method" class="section">
+    <div class="container is-max-desktop">
+      <div class="panelish">
+        <h2 class="title is-3 section-title has-text-centered">How the Reward Is Computed</h2>
+        <div class="content">
+          <p>
+            The reward is computed against <strong>HowToCaption</strong>, a reprocessing of HowTo100M narrations into <strong>25M</strong> captions from <strong>1.2M</strong> videos. We use only the text, never as labels for the policy, and all alignment happens in a precomputed sentence-embedding space. The worked example below follows one prompt through the three steps.
+          </p>
+
+          <div class="figure-block">
+            <img src="./assets/figures/reward.svg" alt="Worked example of the RECIPE reward: sampled rollouts, two-stage grounding in the corpus, and history-baseline reward with the progress gate" width="100%" style="display:block;">
+            <p class="figure-caption">
+              Toy example with illustrative scores. The reward curve is drawn for <em>A</em>(<em>s</em><sub>hist</sub>, <em>N</em>) = 0.40; <em>τ</em> = 0.10 and <em>α</em> = 2 as in the paper.
+            </p>
+          </div>
+
+          <div class="steps3">
+            <div class="step-card">
+              <h4><span class="n">1</span>Sample rollouts</h4>
+              <p>For each prompt the policy samples a group of candidate completions <em>ĉ</em>. Each one forms two text sequences: the history alone, and the history followed by the completion.</p>
+            </div>
+            <div class="step-card">
+              <h4><span class="n">2</span>Ground them in the corpus</h4>
+              <p>A fast order-preserving retrieval keeps the top-<em>K</em> narrations; a global Needleman–Wunsch alignment then re-scores them, penalizing inserted or skipped steps.</p>
+            </div>
+            <div class="step-card">
+              <h4><span class="n">3</span>Reward the progress</h4>
+              <p>A history baseline credits only the progress <em>beyond</em> what the history already explains. Below a progress gate the plan gets a penalty, so paraphrasing the history does not pay.</p>
+            </div>
+          </div>
+          <p class="takeaway">Progress that the narrations support is rewarded; copying the history is penalized. The standardized rewards are used as GRPO advantages within each group of rollouts.</p>
+
+          <h3 class="title is-4 sub-section-title">Configurations</h3>
+          <p>Input, supervision, and training scheme are independent design choices.</p>
+          <div class="table-wrap">
+            <table class="rtable">
+              <thead>
+                <tr><th>Input</th><th>Supervision</th><th>Training</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="wrap"><strong>Socratic</strong><br>frozen VLM converts the video into a textual history</td>
+                  <td class="wrap"><strong>Annotated</strong><br>history and continuation from human-annotated steps</td>
+                  <td class="wrap"><strong>SFT only</strong><br>cross-entropy optimization</td>
+                </tr>
+                <tr>
+                  <td class="wrap"><strong>Video</strong><br>direct video-token conditioning</td>
+                  <td class="wrap"><strong>Weak</strong><br>history and continuation from VLM-derived steps</td>
+                  <td class="wrap"><strong>RL only</strong> (default)<br>corpus-grounded GRPO</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="wrap"><strong>Fully unsupervised</strong><br>history sampled from the corpus, no labeled continuation</td>
+                  <td class="wrap"><strong>SFT→RL</strong><br>sequential SFT and RL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -572,61 +1001,164 @@
         <h2 class="title is-3 section-title has-text-centered">Experiments</h2>
         <div class="content">
           <p>
-            We evaluate RECIPE on seven procedural benchmarks (CrossTask, COIN, CaptainCook4D, EgoProceL for in-domain; NIV, Ego-Exo4D, EgoPER for zero-shot) using a reference-based LLM-as-judge protocol. Below we summarize the main findings.
+            We evaluate on seven procedural benchmarks: CrossTask, COIN, CaptainCook4D, and EgoProceL <strong>in-domain</strong>; NIV, Ego-Exo4D, and EgoPER <strong>zero-shot</strong>. Planners are Qwen2.5 language models at 0.5B, 3B, and 7B in the Socratic configuration, with a frozen Qwen2.5-VL-3B as the vision-language model.
           </p>
 
-          <!-- Main Results -->
-          <h3 class="title is-4 sub-section-title">Main results across scales</h3>
+          <!-- Evaluation protocol -->
+          <h3 class="title is-4 sub-section-title">Open-ended evaluation protocol</h3>
           <p>
-            <strong>RECIPE-RL improves over the base checkpoint at every scale (0.5B, 3B, 7B) and on every benchmark</strong>, with macro-accuracy gains of <strong>+7 to +8 points in-domain</strong> and <strong>up to +16 points zero-shot</strong>. At 7B, in-domain and zero-shot scores are within 0.5 points (46.6 vs. 46.1), indicating the gains do not come at the cost of generalization.
+            Open-ended plans preclude exact-match metrics, so we adopt a reference-based <strong>LLM-as-judge</strong> protocol with <strong>Llama-3.3-70B-Instruct</strong>. The judge scores each continuation on six 0–5 criteria: logical progression, temporal alignment, spatial grounding, continuation, clarity, and semantic alignment. We report the <strong>rubric score (%)</strong>: per-example scores normalized by the 30-point maximum, averaged within each dataset, then averaged across the datasets of a split.
           </p>
-          <div class="figure-block">
-            <img src="./assets/main_results.svg" alt="Main results: macro accuracy at 0.5B, 3B, 7B for Base vs. RECIPE-RL" width="100%" style="display:block;">
+          <p>
+            We validate the judge against human preferences on 178 examples (103 in-domain, 75 zero-shot) with 13 raters comparing continuations from five training schemes.
+          </p>
+          <div class="stat-row">
+            <div class="stat"><div class="big">ρ = 0.900</div><div class="lbl">System-level Spearman correlation with human rankings.</div></div>
+            <div class="stat"><div class="big">82.4%</div><div class="lbl">Pairwise accuracy after tie calibration.</div></div>
+            <div class="stat"><div class="big">70.9%</div><div class="lbl">Pairwise agreement with human preferences.</div></div>
           </div>
+
+          <!-- Main Results -->
+          <h3 class="title is-4 sub-section-title">RECIPE-RL improves at every scale</h3>
+          <p>
+            <strong>RECIPE-RL improves over the base checkpoint at every scale (0.5B, 3B, 7B) and on every benchmark</strong>, with rubric-score gains of <strong>+7 to +8 points in-domain</strong> and <strong>up to +16 points zero-shot</strong>. At 7B, in-domain and zero-shot scores are within 0.5 points (46.6 vs. 46.1), indicating the gains do not come at the cost of generalization.
+          </p>
+          <div class="figure-block fig-narrow">
+            <img src="./assets/figures/main_results.svg" alt="Main results: rubric score at 0.5B, 3B, 7B for Base vs. RECIPE-RL, in-domain and zero-shot" width="100%" style="display:block;">
+          </div>
+          <div class="table-wrap">
+            <table class="rtable">
+              <thead>
+                <tr><th rowspan="2" class="l">Model</th><th colspan="4">In-domain</th><th colspan="3">Zero-shot</th><th colspan="2">Rubric Score</th></tr>
+                <tr><th>CC4D</th><th>COIN</th><th>CrTk</th><th>EgPL</th><th>EgPER</th><th>EgEx</th><th>NIV</th><th>In</th><th>ZS</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="l">Qwen2.5-0.5B Base</td><td>1.9</td><td>1.9</td><td>1.7</td><td>0.4</td><td>0.9</td><td>0.4</td><td>0.9</td><td>1.5</td><td>0.7</td></tr>
+                <tr class="ours"><td class="l">Qwen2.5-0.5B RECIPE-RL</td><td>5.0</td><td>12.0</td><td>9.9</td><td>9.5</td><td>6.7</td><td>5.8</td><td>9.5</td><td>9.1</td><td>7.3</td></tr>
+                <tr><td class="l">Qwen2.5-3B Base</td><td>21.4</td><td>35.2</td><td>35.9</td><td>33.1</td><td>18.8</td><td>25.3</td><td>25.3</td><td>31.4</td><td>23.1</td></tr>
+                <tr class="ours"><td class="l">Qwen2.5-3B RECIPE-RL</td><td>33.1</td><td>42.7</td><td>38.6</td><td>42.5</td><td>30.3</td><td>36.9</td><td>51.0</td><td>39.2</td><td>39.4</td></tr>
+                <tr><td class="l">Qwen2.5-7B Base</td><td>32.2</td><td>42.4</td><td>40.8</td><td>41.6</td><td>23.7</td><td>30.4</td><td>43.5</td><td>39.2</td><td>32.5</td></tr>
+                <tr class="ours"><td class="l">Qwen2.5-7B RECIPE-RL</td><td>39.1</td><td>46.7</td><td>48.0</td><td>52.4</td><td>38.4</td><td>44.0</td><td>55.9</td><td>46.6</td><td>46.1</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-caption">Per-dataset rubric score (%). CC4D: CaptainCook4D; CrTk: CrossTask; EgPL: EgoProceL; EgEx: Ego-Exo4D.</p>
 
           <!-- Supervised alternatives -->
           <h3 class="title is-4 sub-section-title">Same corpus, two roles</h3>
           <p>
-            Using HowTo100M as a <em>pseudo-label source</em> for supervised fine-tuning <strong>degrades</strong> the base checkpoint at every scale. Using the <em>same</em> corpus as a <em>verifier</em> for RL improves it substantially. Both RECIPE variants (RL only and SFT→RL) outperform both SFT baselines.
+            Both methods see HowTo100M. Using it as a <em>pseudo-label source</em> for supervised fine-tuning (SFT-HT100M) <strong>degrades</strong> the base checkpoint at 3B and 7B, for example from 31.4 to 12.1 in-domain at 3B. Using the <em>same</em> corpus as a <em>verifier</em> for RL recovers and exceeds the base by <strong>7.8 points in-domain and 16.3 zero-shot</strong> at 3B. At 3B and 7B both RECIPE variants (RL only and SFT→RL) outperform both SFT baselines, and RL only is the default scheme.
           </p>
-          <div class="figure-block">
-            <img src="./assets/supervision_results.svg" alt="Comparison of SFT (annotated, HT100M) and RECIPE-RL variants" width="100%" style="display:block;">
+          <div class="figure-block fig-narrow">
+            <img src="./assets/figures/two_roles.svg" alt="Same corpus, two roles: Base, SFT on annotations, SFT on HowTo100M pseudo-labels, and the two RECIPE-RL variants" width="100%" style="display:block;">
           </div>
 
           <!-- Weak supervision -->
           <h3 class="title is-4 sub-section-title">Robustness to weak supervision</h3>
           <p>
-            We vary the fraction of weakly supervised training examples (where both history and continuation are derived from a VLM rather than from human annotations) from 0% to 100%. <strong>RECIPE-RL is flat across the supervision mix</strong>, while SFT collapses when annotations are scarce — at high weak-supervision fractions, SFT zero-shot accuracy falls below the no-fine-tuning baseline.
+            We vary the fraction of weakly supervised training examples, where both history and continuation come from a VLM rather than from human annotations, from 0% to 100%. <strong>RECIPE-RL is flat across the supervision mix</strong> (36–40 in-domain, 35–39 zero-shot), while SFT peaks at intermediate mixes and collapses at the extremes, falling below the no-fine-tuning baseline zero-shot when annotations are scarce.
           </p>
-          <div class="figure-block">
-            <img src="./assets/robustness_to_weak_supervision.svg" alt="Robustness to weak supervision: RECIPE-RL vs. SFT under varying weak-supervision fractions" width="100%" style="display:block;">
+          <div class="figure-block fig-narrow">
+            <img src="./assets/figures/weak_supervision.svg" alt="Robustness to weak supervision on Qwen2.5-3B: RECIPE-RL vs. SFT under varying weak-supervision fractions" width="100%" style="display:block;">
+          </div>
+          <div class="table-wrap fig-narrow">
+            <table class="rtable">
+              <thead>
+                <tr><th rowspan="2" class="l">Model</th><th colspan="2">Base</th><th colspan="2">RL, 0% weak</th><th colspan="2">RL, 100% weak</th></tr>
+                <tr><th>In</th><th>ZS</th><th>In</th><th>ZS</th><th>In</th><th>ZS</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="l">Qwen2.5-0.5B</td><td>1.5</td><td>0.7</td><td>9.1</td><td>7.3</td><td><strong>11.9</strong></td><td><strong>9.1</strong></td></tr>
+                <tr><td class="l">Qwen2.5-3B</td><td>31.4</td><td>23.1</td><td><strong>39.2</strong></td><td><strong>39.4</strong></td><td>38.6</td><td>36.0</td></tr>
+                <tr><td class="l">Qwen2.5-7B</td><td>39.2</td><td>32.5</td><td><strong>46.6</strong></td><td>46.1</td><td>46.3</td><td><strong>46.3</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-caption">Training with 100% weak supervision performs comparably to training with annotations at every scale.</p>
+
+          <!-- Fully unsupervised -->
+          <h3 class="title is-4 sub-section-title">Fully unsupervised training</h3>
+          <p>
+            We remove curated procedural datasets from training entirely: histories are sampled as prefixes of HowToCaption narration sequences and the reward is computed against the same corpus, so all seven benchmarks are unseen. <strong>RECIPE-RL improves over Base at every scale</strong> (+21.5, +8.2, and +8.7 points), while SFT on the same data improves only the 0.5B model and degrades 3B and 7B.
+          </p>
+          <div class="figure-block fig-narrow">
+            <img src="./assets/figures/fully_unsupervised.svg" alt="Fully unsupervised training: Base, SFT on HowTo100M, and RECIPE-RL at 0.5B, 3B, 7B" width="100%" style="display:block;">
           </div>
 
-          <!-- VidAssist -->
-          <h3 class="title is-4 sub-section-title">Plug-in to Visual Planning for Assistance</h3>
+          <!-- Video configuration -->
+          <h3 class="title is-4 sub-section-title">Transfer to the Video configuration</h3>
           <p>
-            We integrate RECIPE-RL into the propose–assess–search pipeline of <strong>VidAssist</strong> as an additional proposer. The rest of the pipeline is unchanged, isolating the contribution of the proposal distribution. Pairing VidAssist with RECIPE-RL <strong>improves over every zero-shot baseline</strong> in our comparison on the accuracy metrics across all planning horizons.
+            With Qwen2.5-VL-3B reading video tokens directly, trained on CrossTask and evaluated zero-shot on NIV, <strong>RECIPE-RL improves over the base</strong> under both annotated and weak supervision, while SFT degrades the zero-shot benchmark by 7.9 points, mirroring the SFT collapse of the Socratic configuration. This is a single-backbone, targeted test rather than a full comparison.
           </p>
-          <div class="figure-block">
-            <img src="./assets/VidAssist.svg" alt="Visual Planning for Assistance benchmark: VidAssist with RECIPE-RL improves accuracy at all horizons" width="100%" style="display:block;">
+          <div class="table-wrap fig-narrow">
+            <table class="rtable">
+              <thead>
+                <tr><th class="l">Training scheme</th><th>CrossTask (in-domain)</th><th>NIV (zero-shot)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="l">Base</td><td>25.5</td><td>36.5</td></tr>
+                <tr><td class="l">SFT (annotated)</td><td>28.0</td><td class="bad">28.6</td></tr>
+                <tr><td class="l">SFT (weak)</td><td>27.9</td><td class="bad">28.1</td></tr>
+                <tr class="ours"><td class="l">RECIPE-RL (annotated)</td><td>27.2</td><td>37.1</td></tr>
+                <tr class="ours"><td class="l">RECIPE-RL (weak)</td><td>26.1</td><td>37.6</td></tr>
+              </tbody>
+            </table>
           </div>
 
           <!-- Reward ablation -->
-          <h3 class="title is-4 sub-section-title">Reward-component ablation</h3>
+          <h3 class="title is-4 sub-section-title">Every reward component matters</h3>
           <p>
-            Removing any one of the four reward components (Stage-2 high-fidelity scoring, history baseline, relative-progress normalization, progress gate) costs <strong>4–11 macro-accuracy points</strong>. Stage-2 scoring is the most critical for zero-shot generalization; the history baseline prevents the policy from paraphrasing the history to inflate reward.
+            Removing any one of the four reward components costs <strong>4–11 rubric-score points</strong> on Qwen2.5-3B. Stage 2 high-fidelity scoring is the most critical for zero-shot generalization; the history baseline prevents the policy from paraphrasing the history to inflate the reward.
           </p>
-          <div class="figure-block">
-            <img src="./assets/RewardAblation.svg" alt="Reward-component ablation on Qwen2.5-3B" width="100%" style="display:block;">
+          <div class="table-wrap fig-narrow">
+            <table class="rtable">
+              <thead>
+                <tr><th>Stage 2</th><th>History baseline</th><th>Relative progress</th><th>Progress gate</th><th>In-domain</th><th>Zero-shot</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="no">✗</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td>32.0</td><td>28.8</td></tr>
+                <tr><td class="ok">✓</td><td class="no">✗</td><td class="ok">✓</td><td class="ok">✓</td><td>33.4</td><td>30.8</td></tr>
+                <tr><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td><td class="ok">✓</td><td>30.9</td><td>33.7</td></tr>
+                <tr><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td><td>35.4</td><td>34.0</td></tr>
+                <tr class="ours"><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td>39.2</td><td>39.4</td></tr>
+              </tbody>
+            </table>
           </div>
 
           <!-- Procedural diversity -->
-          <h3 class="title is-4 sub-section-title">Procedural diversity on COIN</h3>
+          <h3 class="title is-4 sub-section-title">More diverse and more accurate</h3>
           <p>
-            A reward that rewards <em>many</em> valid orderings should leave the policy free to express that variety. On the COIN test split, <strong>SFT collapses on both axes</strong> (lowest diversity and lowest accuracy), while <strong>RECIPE-RL is the only configuration in the upper-right region</strong>: it matches the base checkpoint's diversity while adding nearly 10 accuracy points.
+            A reward that accommodates <em>many</em> valid orderings should leave the policy free to express that variety. On 100 prompts from the COIN test split, with 10 generations per prompt, <strong>SFT collapses on both axes</strong> (lowest diversity and lowest rubric score), while <strong>RECIPE-RL is the only configuration in the upper-right region</strong>: it matches the base checkpoint's diversity (0.373 vs. 0.348) while adding nearly 10 rubric-score points.
           </p>
-          <div class="figure-block">
-            <img src="./assets/procedural_diversity_on_COIN.svg" alt="Procedural diversity vs. Score@1 on COIN: RECIPE-RL preserves variety while improving accuracy" width="100%" style="display:block;">
+          <div class="figure-block fig-narrow">
+            <img src="./assets/figures/diversity.svg" alt="Procedural diversity vs. rubric score on COIN: RECIPE-RL preserves variety while improving the score" width="100%" style="display:block;">
+          </div>
+
+          <!-- VPA -->
+          <h3 class="title is-4 sub-section-title">Fixed-taxonomy planning (VPA)</h3>
+          <p>
+            We also evaluate on the more constrained Visual Planning for Assistance benchmark on CrossTask, plugging RECIPE-RL into the propose–assess–search pipeline of <strong>VidAssist</strong> as the proposer. RECIPE-RL <strong>improves VidAssist on mAcc and SR at every horizon</strong>; fully supervised VideoPlan achieves higher scores at <em>T</em> = 3 and <em>T</em> = 4.
+          </p>
+          <div class="table-wrap">
+            <table class="rtable">
+              <thead>
+                <tr><th rowspan="2" class="l">Method</th><th colspan="1">T = 1</th><th colspan="3">T = 3</th><th colspan="3">T = 4</th></tr>
+                <tr><th>mAcc</th><th>SR</th><th>mAcc</th><th>mIoU</th><th>SR</th><th>mAcc</th><th>mIoU</th></tr>
+              </thead>
+              <tbody>
+                <tr class="grp"><td colspan="8">Fully supervised</td></tr>
+                <tr><td class="l">DDN</td><td>33.4</td><td>6.8</td><td>25.8</td><td>35.2</td><td>3.6</td><td>24.1</td><td>37.0</td></tr>
+                <tr><td class="l">LTA</td><td>26.9</td><td>2.4</td><td>24.0</td><td>35.2</td><td>1.2</td><td>21.7</td><td>36.8</td></tr>
+                <tr><td class="l">VLaMP</td><td>50.6</td><td>10.3</td><td>35.3</td><td>44.0</td><td>4.4</td><td>31.7</td><td>43.4</td></tr>
+                <tr><td class="l">VideoPlan</td><td>–</td><td>15.4</td><td>39.4</td><td>51.4</td><td>9.9</td><td>37.4</td><td>54.3</td></tr>
+                <tr class="grp"><td colspan="8">Zero-shot / no supervised CrossTask targets</td></tr>
+                <tr><td class="l">LLM Baseline</td><td>25.8</td><td>2.1</td><td>23.2</td><td>27.7</td><td>0.4</td><td>18.9</td><td>33.0</td></tr>
+                <tr><td class="l">LLM Agent Baseline</td><td>28.7</td><td>3.1</td><td>25.6</td><td>29.9</td><td>0.8</td><td>20.0</td><td>35.6</td></tr>
+                <tr><td class="l">VidAssist</td><td>38.7</td><td>8.7</td><td>28.5</td><td>44.1</td><td>4.6</td><td>25.8</td><td>46.8</td></tr>
+                <tr><td class="l">VidAssist w/ Base</td><td>36.5</td><td>2.0</td><td>27.3</td><td>33.0</td><td>1.0</td><td>24.3</td><td>32.0</td></tr>
+                <tr class="ours"><td class="l">VidAssist w/ RECIPE-RL</td><td>39.9</td><td>9.3</td><td>29.9</td><td>35.7</td><td>4.8</td><td>26.0</td><td>34.5</td></tr>
+              </tbody>
+            </table>
           </div>
 
           <!-- Qualitative -->
@@ -639,21 +1171,22 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
+  <!-- BibTeX -->
+  <section id="bibtex" class="section">
     <div class="container is-max-desktop">
       <div class="panelish">
-        <h2 class="title is-3 section-title has-text-centered">Contact</h2>
-        <div class="content">
-          <p>
-            For technical questions, please reach out via email.
-          </p>
-          <p>
-            Email:
-            <a href="mailto:seminara.l@northeastern.edu?subject=Inquiry about RECIPE&cc=antonino.furnari@unict.it;l.torresani@northeastern.edu">
-              seminara.l@northeastern.edu
-            </a>
-          </p>
+        <h2 class="title is-3 section-title has-text-centered">BibTeX</h2>
+        <p class="has-text-centered" style="color: var(--muted);">If you find RECIPE useful, please cite our paper.</p>
+        <div class="bibtex-wrap">
+          <button id="copyBib" class="copy-btn" type="button" aria-label="Copy BibTeX to clipboard">Copy</button>
+<pre><code id="bibtexCode">@inproceedings{
+seminara2026recipe,
+title={{RECIPE}: Procedural Planning via Grounding in Instructional Video},
+author={Luigi Seminara and Antonino Furnari and Lorenzo Torresani},
+booktitle={The Fortieth Annual Conference on Neural Information Processing Systems},
+year={2026},
+url={https://openreview.net/forum?id=lpkQB5Oy5S}
+}</code></pre>
         </div>
       </div>
     </div>
@@ -664,18 +1197,43 @@
     <div class="container is-max-desktop">
       <div class="panelish">
         <h2 class="title is-3 section-title has-text-centered">Authors</h2>
-        <div class="content">
-          <div style="margin-top: 26px;">
-            <img src="./assets/authors.svg" alt="Authors of RECIPE" width="100%" style="display:block;">
-          </div>
+        <div class="author-grid">
+          <a class="author-card" href="https://seminaraluigi.altervista.org/" target="_blank" rel="noopener">
+            <img src="./assets/authors/luigi-seminara.jpg" alt="Luigi Seminara" width="148" height="148" loading="lazy">
+            <div class="name">Luigi Seminara</div>
+            <div class="aff">Northeastern University<br>University of Catania</div>
+          </a>
+          <a class="author-card" href="https://antoninofurnari.github.io/" target="_blank" rel="noopener">
+            <img src="./assets/authors/antonino-furnari.jpg" alt="Antonino Furnari" width="148" height="148" loading="lazy">
+            <div class="name">Antonino Furnari</div>
+            <div class="aff">University of Catania</div>
+          </a>
+          <a class="author-card" href="https://www.khoury.northeastern.edu/people/lorenzo-torresani/" target="_blank" rel="noopener">
+            <img src="./assets/authors/lorenzo-torresani.jpg" alt="Lorenzo Torresani" width="148" height="148" loading="lazy">
+            <div class="name">Lorenzo Torresani</div>
+            <div class="aff">Northeastern University</div>
+          </a>
         </div>
+
+        <div id="contact" class="has-text-centered" style="margin-top: 26px; color: var(--muted);">
+          <p>
+            For technical questions, please reach out via email:
+            <a href="mailto:seminara.l@northeastern.edu?subject=Inquiry about RECIPE&cc=antonino.furnari@unict.it;l.torresani@northeastern.edu">
+              <strong>seminara.l@northeastern.edu</strong>
+            </a>
+          </p>
+        </div>
+
+        <p class="mini-note has-text-centered" style="margin-top: 18px;">
+          This work was supported in part by Northeastern University startup funds and the President Joseph E. Aoun Chair. We acknowledge the computational resources and support provided by Northeastern University's Research Computing team through the Explorer Cluster and by CINECA through the ISCRA initiative.
+        </p>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="content has-text-centered">
-      <p class="mini-note">© <span id="year"></span> RECIPE — Procedural Planning via Grounding in Instructional Video</p>
+      <p class="mini-note">© <span id="year"></span> RECIPE — Procedural Planning via Grounding in Instructional Video &nbsp;•&nbsp; NeurIPS 2026</p>
     </div>
   </footer>
 

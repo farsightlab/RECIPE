@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1000" height="729.493" viewBox="1137 477.253 250 182.373">
+<defs></defs>
+<rect x="1137" y="477.253" width="250" height="182.373" fill="#ffffff"/>
+<rect x="1154" y="479.389" width="7.75" height="4.96" rx="0.6" ry="0.6" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1163.92" y="483.853" style="font-family:Arial;font-size:6.2px;fill:#1A1A1A;text-anchor:start;text-align:start">Base</text>
+<rect x="1185.465" y="479.389" width="7.75" height="4.96" rx="0.6" ry="0.6" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1195.385" y="483.853" style="font-family:Arial;font-size:6.2px;fill:#1A1A1A;text-anchor:start;text-align:start">SFT-HT100M</text>
+<rect x="1240.33" y="479.389" width="7.75" height="4.96" rx="0.6" ry="0.6" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1250.25" y="483.853" style="font-family:Arial;font-size:6.2px;fill:#1A1A1A;text-anchor:start;text-align:start">RECIPE-RL</text>
+<text xml:space="preserve" x="1142.4" y="565.44" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center" transform="rotate(-90 1142.4 565.44)">Rubric score (%)</text>
+<text xml:space="preserve" x="1151.8" y="643.803" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">0</text>
+<line x1="1154" y1="611.152" x2="1380" y2="611.152" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="613.328" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">10</text>
+<line x1="1154" y1="580.677" x2="1380" y2="580.677" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="582.853" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">20</text>
+<line x1="1154" y1="550.203" x2="1380" y2="550.203" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="552.379" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">30</text>
+<line x1="1154" y1="519.728" x2="1380" y2="519.728" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="521.904" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">40</text>
+<line x1="1154" y1="489.253" x2="1380" y2="489.253" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1151.8" y="491.429" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">50</text>
+<line x1="1154" y1="641.627" x2="1380" y2="641.627" stroke="#777" stroke-width="0.6" stroke-linecap="butt"/>
+<rect x="1169.067" y="638.274" width="14.567" height="3.352" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1176.4" y="636.674" style="font-family:Arial;font-size:6.2px;fill:#555;text-anchor:middle;text-align:center;font-weight:bold">1.1</text>
+<rect x="1184.133" y="623.342" width="14.567" height="18.285" rx="0" ry="0" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1191.467" y="621.742" style="font-family:Arial;font-size:6.2px;fill:#E0433F;text-anchor:middle;text-align:center;font-weight:bold">6.0</text>
+<rect x="1199.2" y="572.754" width="14.567" height="68.873" rx="0" ry="0" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1206.533" y="571.154" style="font-family:Arial;font-size:6.2px;fill:#005D96;text-anchor:middle;text-align:center;font-weight:bold">22.6</text>
+<text xml:space="preserve" x="1191.667" y="648.347" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">Qwen2.5-0.5B</text>
+<rect x="1244.4" y="550.507" width="14.567" height="91.119" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1251.733" y="548.907" style="font-family:Arial;font-size:6.2px;fill:#555;text-anchor:middle;text-align:center;font-weight:bold">29.9</text>
+<rect x="1259.467" y="583.115" width="14.567" height="58.511" rx="0" ry="0" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1266.8" y="581.515" style="font-family:Arial;font-size:6.2px;fill:#E0433F;text-anchor:middle;text-align:center;font-weight:bold">19.2</text>
+<rect x="1274.533" y="525.518" width="14.567" height="116.108" rx="0" ry="0" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1281.867" y="523.918" style="font-family:Arial;font-size:6.2px;fill:#005D96;text-anchor:middle;text-align:center;font-weight:bold">38.1</text>
+<text xml:space="preserve" x="1267" y="648.347" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">Qwen2.5-3B</text>
+<rect x="1319.733" y="530.699" width="14.567" height="110.928" rx="0" ry="0" fill="#B4B4B4" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1327.067" y="529.099" style="font-family:Arial;font-size:6.2px;fill:#555;text-anchor:middle;text-align:center;font-weight:bold">36.4</text>
+<rect x="1334.8" y="572.449" width="14.567" height="69.177" rx="0" ry="0" fill="#E0433F" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1342.133" y="570.849" style="font-family:Arial;font-size:6.2px;fill:#E0433F;text-anchor:middle;text-align:center;font-weight:bold">22.7</text>
+<rect x="1349.867" y="504.186" width="14.567" height="137.441" rx="0" ry="0" fill="#005D96" stroke="none" stroke-width="0.5" />
+<text xml:space="preserve" x="1357.2" y="502.586" style="font-family:Arial;font-size:6.2px;fill:#005D96;text-anchor:middle;text-align:center;font-weight:bold">45.1</text>
+<text xml:space="preserve" x="1342.333" y="648.347" style="font-family:Arial;font-size:6.4px;fill:#1A1A1A;text-anchor:middle;text-align:center">Qwen2.5-7B</text>
+<text xml:space="preserve" x="1267" y="657.127" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center">Trained only on the noisy corpus</text>
+</svg>

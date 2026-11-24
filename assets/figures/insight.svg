@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1232" height="522.8" viewBox="19 491.919 308 130.7">
+<defs></defs>
+<rect x="19" y="491.919" width="308" height="130.7" fill="#ffffff"/>
+<rect x="20" y="492.919" width="148" height="25" rx="2.5" ry="2.5" fill="#FBE3E0" stroke="#C8413B" stroke-width="0.7" />
+<text xml:space="preserve" x="94" y="507.599" style="font-family:Arial;font-size:9px;line-height:1.156;fill:#C8413B;text-anchor:middle;text-align:center"><tspan sodipodi:role="line" x="94" y="507.599"><tspan style="font-weight:bold">Corpus as a label source</tspan></tspan></text>
+<polyline points="94,518.419 94,522.395" fill="none" stroke="#C8413B" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="butt"/>
+<polygon points="94,525.419 92.034,521.639 95.966,521.639" fill="#C8413B" stroke="none" stroke-width="0.5" stroke-linejoin="round"/>
+<rect x="23" y="525.919" width="142" height="18" rx="2.5" ry="2.5" fill="#fff" stroke="#C8413B" stroke-width="0.7" />
+<text xml:space="preserve" x="94" y="536.725" style="font-family:Arial;font-size:8.6px;line-height:1.22;fill:#1A1A1A;text-anchor:middle;text-align:center"><tspan sodipodi:role="line" x="94" y="536.725">Noisy ASR narrations</tspan></text>
+<polyline points="94,544.419 94,548.395" fill="none" stroke="#C8413B" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="butt"/>
+<polygon points="94,551.419 92.034,547.639 95.966,547.639" fill="#C8413B" stroke="none" stroke-width="0.5" stroke-linejoin="round"/>
+<rect x="23" y="551.919" width="142" height="18" rx="2.5" ry="2.5" fill="#fff" stroke="#C8413B" stroke-width="0.7" />
+<text xml:space="preserve" x="94" y="562.725" style="font-family:Arial;font-size:8.6px;line-height:1.22;fill:#1A1A1A;text-anchor:middle;text-align:center"><tspan sodipodi:role="line" x="94" y="562.725">Extract pseudo-labels</tspan></text>
+<polyline points="94,570.419 94,574.395" fill="none" stroke="#C8413B" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="butt"/>
+<polygon points="94,577.419 92.034,573.639 95.966,573.639" fill="#C8413B" stroke="none" stroke-width="0.5" stroke-linejoin="round"/>
+<rect x="23" y="577.919" width="142" height="18" rx="2.5" ry="2.5" fill="#fff" stroke="#C8413B" stroke-width="0.7" />
+<text xml:space="preserve" x="94" y="588.725" style="font-family:Arial;font-size:8.6px;line-height:1.22;fill:#1A1A1A;text-anchor:middle;text-align:center"><tspan sodipodi:role="line" x="94" y="588.725">SFT on one trajectory</tspan></text>
+<polyline points="21.9,602.719 27.6,608.419" fill="none" stroke="#C8413B" stroke-width="1.275" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="27.6,602.719 21.9,608.419" fill="none" stroke="#C8413B" stroke-width="1.275" stroke-linejoin="round" stroke-linecap="round"/>
+<text xml:space="preserve" x="31.5" y="607.815" style="font-family:Arial;font-size:8.6px;line-height:1.233;fill:#C8413B;text-anchor:start;text-align:start"><tspan sodipodi:role="line" x="31.5" y="607.815"><tspan style="font-weight:bold">errors propagate</tspan></tspan></text>
+<rect x="178" y="492.919" width="148" height="25" rx="2.5" ry="2.5" fill="#E4EFD6" stroke="#6E8B2A" stroke-width="0.7" />
+<text xml:space="preserve" x="252" y="507.599" style="font-family:Arial;font-size:9px;line-height:1.156;fill:#6E8B2A;text-anchor:middle;text-align:center"><tspan sodipodi:role="line" x="252" y="507.599"><tspan style="font-weight:bold">Corpus as a verifier (RECIPE)</tspan></tspan></text>
+<polyline points="252,518.419 252,522.395" fill="none" stroke="#6E8B2A" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="butt"/>
+<polygon points="252,525.419 250.034,521.639 253.966,521.639" fill="#6E8B2A" stroke="none" stroke-width="0.5" stroke-linejoin="round"/>
+<rect x="181" y="525.919" width="142" height="18" rx="2.5" ry="2.5" fill="#fff" stroke="#6E8B2A" stroke-width="0.7" />
+<text xml:space="preserve" x="252" y="536.725" style="font-family:Arial;font-size:8.6px;line-height:1.22;fill:#1A1A1A;text-anchor:middle;text-align:center"><tspan sodipodi:role="line" x="252" y="536.725">Policy proposes a plan <tspan style="font-style:italic">ĉ</tspan></tspan></text>
+<polyline points="252,544.419 252,548.395" fill="none" stroke="#6E8B2A" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="butt"/>
+<polygon points="252,551.419 250.034,547.639 253.966,547.639" fill="#6E8B2A" stroke="none" stroke-width="0.5" stroke-linejoin="round"/>
+<rect x="181" y="551.919" width="142" height="18" rx="2.5" ry="2.5" fill="#fff" stroke="#6E8B2A" stroke-width="0.7" />
+<text xml:space="preserve" x="252" y="562.725" style="font-family:Arial;font-size:8.6px;line-height:1.22;fill:#1A1A1A;text-anchor:middle;text-align:center"><tspan sodipodi:role="line" x="252" y="562.725">Align <tspan style="font-style:italic">ĉ</tspan> with the corpus</tspan></text>
+<polyline points="252,570.419 252,574.395" fill="none" stroke="#6E8B2A" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="butt"/>
+<polygon points="252,577.419 250.034,573.639 253.966,573.639" fill="#6E8B2A" stroke="none" stroke-width="0.5" stroke-linejoin="round"/>
+<rect x="181" y="577.919" width="142" height="18" rx="2.5" ry="2.5" fill="#fff" stroke="#6E8B2A" stroke-width="0.7" />
+<text xml:space="preserve" x="252" y="588.725" style="font-family:Arial;font-size:8.6px;line-height:1.22;fill:#1A1A1A;text-anchor:middle;text-align:center"><tspan sodipodi:role="line" x="252" y="588.725">Reward → GRPO update</tspan></text>
+<polyline points="179.6,605.944 181.85,608.269 186.05,602.869" fill="none" stroke="#6E8B2A" stroke-width="1.275" stroke-linejoin="round" stroke-linecap="round"/>
+<text xml:space="preserve" x="189.5" y="607.815" style="font-family:Arial;font-size:8.6px;line-height:1.233;fill:#6E8B2A;text-anchor:start;text-align:start"><tspan sodipodi:role="line" x="189.5" y="607.815"><tspan style="font-weight:bold">noise absorbed, many valid</tspan></tspan><tspan sodipodi:role="line" x="189.5" y="618.415"><tspan style="font-weight:bold">orderings rewarded</tspan></tspan></text>
+</svg>

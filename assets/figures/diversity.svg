@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1000" height="733.493" viewBox="1137 692.627 250 183.373">
+<defs></defs>
+<rect x="1137" y="692.627" width="250" height="183.373" fill="#ffffff"/>
+<text xml:space="preserve" x="1142.4" y="778.813" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center" transform="rotate(-90 1142.4 778.813)">Rubric score (%)</text>
+<rect x="1158" y="698.627" width="218" height="160.373" rx="0" ry="0" fill="#FAFAFA" stroke="none" stroke-width="0.5" />
+<line x1="1158" y1="845.636" x2="1376" y2="845.636" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1155.8" y="847.836" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">30</text>
+<line x1="1158" y1="812.224" x2="1376" y2="812.224" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1155.8" y="814.424" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">35</text>
+<line x1="1158" y1="778.813" x2="1376" y2="778.813" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1155.8" y="781.013" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">40</text>
+<line x1="1158" y1="745.402" x2="1376" y2="745.402" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1155.8" y="747.602" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">45</text>
+<line x1="1158" y1="711.991" x2="1376" y2="711.991" stroke="#DDDFE3" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1155.8" y="714.191" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:end;text-align:end">50</text>
+<line x1="1172.533" y1="698.627" x2="1172.533" y2="859" stroke="#E6E8EB" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1172.533" y="865.72" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center">0.15</text>
+<line x1="1208.867" y1="698.627" x2="1208.867" y2="859" stroke="#E6E8EB" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1208.867" y="865.72" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center">0.20</text>
+<line x1="1245.2" y1="698.627" x2="1245.2" y2="859" stroke="#E6E8EB" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1245.2" y="865.72" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center">0.25</text>
+<line x1="1281.533" y1="698.627" x2="1281.533" y2="859" stroke="#E6E8EB" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1281.533" y="865.72" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center">0.30</text>
+<line x1="1317.867" y1="698.627" x2="1317.867" y2="859" stroke="#E6E8EB" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1317.867" y="865.72" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center">0.35</text>
+<line x1="1354.2" y1="698.627" x2="1354.2" y2="859" stroke="#E6E8EB" stroke-width="0.35" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1354.2" y="865.72" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center">0.40</text>
+<line x1="1158" y1="859" x2="1376" y2="859" stroke="#777" stroke-width="0.6" stroke-linecap="butt"/>
+<line x1="1158" y1="698.627" x2="1158" y2="859" stroke="#777" stroke-width="0.6" stroke-linecap="butt"/>
+<text xml:space="preserve" x="1267" y="874" style="font-family:Arial;font-size:6.4px;fill:#555555;text-anchor:middle;text-align:center">Procedural diversity</text>
+<polyline points="1183.433,833.608 1316.413,782.823 1334.58,719.342" fill="none" stroke="#9A9A9A" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1180.433" y="830.608" width="6" height="6" rx="0" ry="0" fill="#F4A3A1" stroke="#C8413B" stroke-width="0.5" />
+<polygon points="1316.413,779.023 1320.013,785.623 1312.813,785.623" fill="#8E8E8E" stroke="none" stroke-width="0.5" stroke-linejoin="round"/>
+<circle cx="1334.58" cy="719.342" r="3.8" fill="#005D96" stroke="none" stroke-width="0.5"/>
+<text xml:space="preserve" x="1190.433" y="842.108" style="font-family:Arial;font-size:6.8px;fill:#C8413B;text-anchor:start;text-align:start"><tspan style="font-weight:bold">SFT</tspan></text>
+<text xml:space="preserve" x="1190.433" y="849.608" style="font-family:Arial;font-size:6px;fill:#555555;text-anchor:start;text-align:start">(0.165, 31.8%)</text>
+<text xml:space="preserve" x="1323.413" y="787.323" style="font-family:Arial;font-size:6.8px;fill:#555;text-anchor:start;text-align:start"><tspan style="font-weight:bold">Base</tspan></text>
+<text xml:space="preserve" x="1323.413" y="794.823" style="font-family:Arial;font-size:6px;fill:#555555;text-anchor:start;text-align:start">(0.348, 39.4%)</text>
+<text xml:space="preserve" x="1327.58" y="718.842" style="font-family:Arial;font-size:6.8px;fill:#005D96;text-anchor:end;text-align:end"><tspan style="font-weight:bold">RECIPE-RL</tspan></text>
+<text xml:space="preserve" x="1327.58" y="726.842" style="font-family:Arial;font-size:6px;fill:#555555;text-anchor:end;text-align:end">(0.373, 48.9%)</text>
+</svg>
